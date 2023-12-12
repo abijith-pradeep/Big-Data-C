@@ -1,0 +1,47 @@
+spark-submit task1a.py /shared/CS-GY-6513/hw-map-reduce/Data/trip_data_shorter.csv /shared/CS-GY-6513/hw-map-reduce/Data/fare_data_shorter.csv
+
+
+spark-submit task1a-sql.py /shared/CS-GY-6513/hw-map-reduce/Data/trip_data_shorter.csv /shared/CS-GY-6513/hw-map-reduce/Data/fare_data_shorter.csv
+
+['medallion', 'hack_license', 'vendor_id', 'rate_code', 'store_and_fwd_flag', 'pickup_datetime', 'dropoff_datetime', 'passenger_count', 'trip_time_in_secs', 'trip_distance', 'pickup_longitude', 'pickup_latitude', 'dropoff_longitude', 'dropoff_latitude']
+
+
+line[0] line[1] line[2] line[5]
+
+['medallion', 'hack_license', 'vendor_id', 'pickup_datetime', 'payment_type', 'fare_amount', 'surcharge', 'mta_tax', 'tip_amount', 'tolls_amount', 'total_amount']
+
+line[0] line[1] line[2] 
+
+hdfs dfs -get /shared/CS-GY-6513/hw-map-reduce/Autograder.zip unzip Autograder.zip
+
+spark-submit task1b.py /shared/CS-GY-6513/hw-map-reduce/Data/fare_data_shorter.csv /shared/CS-GY-6513/hw-map-reduce/Data/licenses.csv
+
+['medallion', 'name', 'type', 'current_status', 'DMV_license_plate', 'vehicle_VIN_number', 'vehicle_type', 'model_year', 'medallion_type', 'agent_number', 'agent_name', 'agent_telephone_number', 'agent_website', 'agent_address', 'last_updated_date', 'last_updated_time']
+
+spark-submit task1b-sql.py /shared/CS-GY-6513/hw-map-reduce/Data/fare_data_shorter.csv /shared/CS-GY-6513/hw-map-reduce/Data/licenses.csv
+
+2-a
+
+spark-submit task2a-sql.py /shared/CS-GY-6513/hw-map-reduce/Data/trip_data_shorter.csv /shared/CS-GY-6513/hw-map-reduce/Data/fare_data_shorter.csv
+
+
+2-b
+
+spark-submit task2b-sql.py /shared/CS-GY-6513/hw-map-reduce/Data/trip_data_shorter.csv /shared/CS-GY-6513/hw-map-reduce/Data/fare_data_shorter.csv
+
+SELECT passenger_count AS number_of_passengers, COUNT(*) AS num_trips
+FROM trips
+GROUP BY number_of_passengers
+ORDER BY number_of_passengers ASC;
+
+2-c
+
+spark-submit task2c-sql.py /shared/CS-GY-6513/hw-map-reduce/Data/trip_data_shorter.csv /shared/CS-GY-6513/hw-map-reduce/Data/fare_data_shorter.csv
+
+
+
+4-a
+
+spark-submit task4a-sql.py /shared/CS-GY-6513/hw-map-reduce/Data/fare_data_shorter.csv /shared/CS-GY-6513/hw-map-reduce/Data/licenses.csv
+
+

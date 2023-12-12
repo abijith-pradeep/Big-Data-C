@@ -1,0 +1,19 @@
+Normal:
+
+time hadoop jar /usr/lib/hadoop/hadoop-streaming.jar -D mapreduce.job.reduces=2 -file ./*.py -mapper mapper.py -reducer reducer.py -input /shared/CS-GY-6513/Lab1/wikipedia.txt -output /user/ap8246_nyu_edu/example.out
+
+time hadoop jar /usr/lib/hadoop/hadoop-streaming.jar -D mapreduce.job.reduces=2 -file ./*.py -mapper mapper.py -reducer reducer.py -input /shared/CS-GY-6513/Lab1/wikipedia2.txt -output /user/ap8246_nyu_edu/example2.out
+
+
+Copy reducer as combiner:
+
+time hadoop jar /usr/lib/hadoop/hadoop-streaming.jar -D mapreduce.job.reduces=2 -file ./*.py -mapper mapper.py -combiner combiner.py -reducer reducer.py -input /shared/CS-GY-6513/Lab1/wikipedia.txt -output /user/ap8246_nyu_edu/example.out
+
+time hadoop jar /usr/lib/hadoop/hadoop-streaming.jar -D mapreduce.job.reduces=2 -file ./*.py -mapper mapper.py -combiner combiner.py -reducer reducer.py -input /shared/CS-GY-6513/Lab1/wikipedia2.txt -output /user/ap8246_nyu_edu/example2.out
+
+
+In Mapper Combiner:
+
+time hadoop jar /usr/lib/hadoop/hadoop-streaming.jar -D mapreduce.job.reduces=2 -file ./*.py -mapper mpcm.py -reducer reducer.py -input /shared/CS-GY-6513/Lab1/wikipedia.txt -output /user/ap8246_nyu_edu/example.out
+
+time hadoop jar /usr/lib/hadoop/hadoop-streaming.jar -D mapreduce.job.reduces=2 -file ./*.py -mapper mpcm.py -reducer reducer.py -input /shared/CS-GY-6513/Lab1/wikipedia2.txt -output /user/ap8246_nyu_edu/example2.out

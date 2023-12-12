@@ -1,0 +1,141 @@
+hadoop jar /usr/lib/hadoop/hadoop-streaming.jar -D mapreduce.job.reduces=2 -file ./*.py -mapper mapper.py -reducer reducer.py -input /shared/CS-GY-6513/Lab1/wikipedia.txt -output /user/netid_nyu_edu/example.out
+
+
+Wikipedia.txt
+
+Total time spent by all maps in occupied slots (ms)=5362556
+Total time spent by all reduces in occupied slots (ms)=48416
+Total time spent by all map tasks (ms)=1340639
+Total time spent by all reduce tasks (ms)=12104
+Total vcore-milliseconds taken by all map tasks=1340639
+Total vcore-milliseconds taken by all reduce tasks=12104
+Total megabyte-milliseconds taken by all map tasks=5491257344
+Total megabyte-milliseconds taken by all reduce tasks=49577984
+
+
+
+File System Counters
+                FILE: Number of bytes read=35478628
+                FILE: Number of bytes written=106765578
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=24558746
+                HDFS: Number of bytes written=2740536
+                HDFS: Number of read operations=433
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=6
+                HDFS: Number of bytes read erasure-coded=0
+        Job Counters 
+                Killed map tasks=1
+                Killed reduce tasks=1
+                Launched map tasks=141
+                Launched reduce tasks=2
+                Data-local map tasks=48
+                Rack-local map tasks=93
+        Map-Reduce Framework
+                Map input records=1000
+                Map output records=3451279
+                Map output bytes=28576054
+                Map output materialized bytes=35480308
+                Input split bytes=15510
+                Combine input records=0
+                Combine output records=0
+                Reduce input groups=241122
+                Reduce shuffle bytes=35480308
+                Reduce input records=3451279
+                Reduce output records=241120
+                Spilled Records=6902558
+                Shuffled Maps =282
+                Failed Shuffles=0
+                Merged Map outputs=282
+                GC time elapsed (ms)=31462
+                CPU time spent (ms)=471690
+                Physical memory (bytes) snapshot=104603721728
+                Virtual memory (bytes) snapshot=688156151808
+                Total committed heap usage (bytes)=103036747776
+                Peak Map Physical memory (bytes)=777441280
+                Peak Map Virtual memory (bytes)=4873322496
+                Peak Reduce Physical memory (bytes)=471830528
+                Peak Reduce Virtual memory (bytes)=4812791808
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters 
+                Bytes Read=24543236
+        File Output Format Counters 
+                Bytes Written=2740536
+
+
+Wikipedia2.txt
+
+Total time spent by all maps in occupied slots (ms)=5386908
+Total time spent by all reduces in occupied slots (ms)=57420
+Total time spent by all map tasks (ms)=1346727
+Total time spent by all reduce tasks (ms)=14355
+Total vcore-milliseconds taken by all map tasks=1346727
+Total vcore-milliseconds taken by all reduce tasks=14355
+Total megabyte-milliseconds taken by all map tasks=5516193792
+Total megabyte-milliseconds taken by all reduce tasks=58798080
+
+
+File System Counters
+                FILE: Number of bytes read=62453108
+                FILE: Number of bytes written=160714824
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=37833427
+                HDFS: Number of bytes written=937201
+                HDFS: Number of read operations=433
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=6
+                HDFS: Number of bytes read erasure-coded=0
+        Job Counters 
+                Killed map tasks=1
+                Killed reduce tasks=1
+                Launched map tasks=141
+                Launched reduce tasks=2
+                Data-local map tasks=48
+                Rack-local map tasks=93
+        Map-Reduce Framework
+                Map input records=32426
+                Map output records=6360070
+                Map output bytes=49732956
+                Map output materialized bytes=62454788
+                Input split bytes=15651
+                Combine input records=0
+                Combine output records=0
+                Reduce input groups=83048
+                Reduce shuffle bytes=62454788
+                Reduce input records=6360070
+                Reduce output records=83046
+                Spilled Records=12720140
+                Shuffled Maps =282
+                Failed Shuffles=0
+                Merged Map outputs=282
+                GC time elapsed (ms)=31164
+                CPU time spent (ms)=472280
+                Physical memory (bytes) snapshot=104570003456
+                Virtual memory (bytes) snapshot=688120004608
+                Total committed heap usage (bytes)=103166771200
+                Peak Map Physical memory (bytes)=773173248
+                Peak Map Virtual memory (bytes)=4888354816
+                Peak Reduce Physical memory (bytes)=475176960
+                Peak Reduce Virtual memory (bytes)=4805279744
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters 
+                Bytes Read=37817776
+        File Output Format Counters 
+                Bytes Written=937201
+

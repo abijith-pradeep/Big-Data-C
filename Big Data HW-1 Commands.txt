@@ -1,0 +1,27 @@
+medallion,hack_license,vendor_id,pickup_datetime,payment_type,fare_amount,surcharge,mta_tax,tip_amount,tolls_amount,total_amount
+4B37DE7600AEF9C61F784B05FDEEE0E9,1D7E4CD01ED1C7A6E662A2A9A4B7153F,CMT,2013-08-04 00:03:59,CRD,7.5,0.5,0.5,2.1,0,10.6
+EEC9C6596BD11B4F213367BEF164ED40,902B96BCB437D747BA50888778132BE4,CMT,2013-08-04 00:16:29,CRD,6.5,0.5,0.5,1.87,0,9.37
+B009310787A68502FFD50A2F9CB5CE26,A44307E7C864D631E9A26B49C25DD23B,CMT,2013-08-04 00:11:00,CRD,14.5,0.5,0.5,3,0,18.5
+A408F138216DE3E432BBF2FD88665A88,82EA6A085709BE93AA9DA363A85A04FF,CMT,2013-08-04 00:04:26,CRD,12.5,0.5,0.5,3.37,0,16.87
+
+
+medallion,hack_license,vendor_id,rate_code,store_and_fwd_flag,pickup_datetime,dropoff_datetime,passenger_count,trip_time_in_secs,trip_distance,pickup_longitude,pickup_latitude,dropoff_longitude,dropoff_latitude
+4B37DE7600AEF9C61F784B05FDEEE0E9,1D7E4CD01ED1C7A6E662A2A9A4B7153F,CMT,1,N,2013-08-04 00:03:59,2013-08-04 00:12:46,2,527,1.3,-74.008743,40.738098,-73.992302,40.743961
+EEC9C6596BD11B4F213367BEF164ED40,902B96BCB437D747BA50888778132BE4,CMT,1,N,2013-08-04 00:16:29,2013-08-04 00:21:41,1,311,1.2,-73.955505,40.776752,-73.942024,40.786846
+B009310787A68502FFD50A2F9CB5CE26,A44307E7C864D631E9A26B49C25DD23B,CMT,1,N,2013-08-04 00:11:00,2013-08-04 00:21:57,1,656,4.3,-73.993073,40.698143,-73.979675,40.657543
+A408F138216DE3E432BBF2FD88665A88,82EA6A085709BE93AA9DA363A85A04FF,CMT,1,N,2013-08-04 00:04:26,2013-08-04 00:18:27,1,840,3.2,-73.954834,40.765484,-73.999046,40.760777
+C46A099283B423340CD9CC2837E73761,4339B58CF42D6B3011479B8D9731CA7F,CMT,1,N,2013-08-04 00:09:55,2013-08-04 00:18:53,1,538,1,-73.988869,40.723156,-74.001343,40.731052
+D2AB55F01AF27798676764A433417159,E7A1A91205704160E999F0371AC8731C,CMT,1,N,2013-08-04 00:12:46,2013-08-04 00:34:24,2,1298,2.6,-74.00927,40.715389,-73.992607,40.696297
+A1D2443DBA9D5930517CA95637E35CC7,753ADD7A762575F48B712E3F7D42B698,CMT,1,N,2013-08-04 00:10:54,2013-08-04 00:43:51,1,1976,5.6,-74.007736,40.743092,-73.973473,40.686546
+A86C970A0BF5A3165C48031CCBDBDCF7,BEFB64C2A489036F143F3DC27FC66A16,CMT,1,N,2013-08-04 00:12:22,2013-08-04 00:20:33,1,490,2.6,-74.015106,40.708481,-74.005859,40.741146
+5AF3F94754F3F298CC97610D8DA952FE,B834ED40BBDF5B4DCC5336E9AC7B9130,CMT,1,N,2013-08-04 00:12:43,2013-08-04 00:25:48,2,785,2.4,-74.009048,40.680664,-73.977348,40.686886
+
+hadoop jar /usr/lib/hadoop/hadoop-streaming.jar -D mapreduce.job.reduces=2 -file ./*.py -mapper map.py -reducer reduce.py -input /shared/CS-GY-6513/hw-map-reduce/Data/samples/trips_sunday.csv -input /shared/CS-GY-6513/hw-map-reduce/Data/samples/fares_sunday.csv -output /user/ap8246_nyu_edu/task1output/
+
+hadoop jar /usr/lib/hadoop/hadoop-streaming.jar -D mapreduce.job.reduces=2 -file ./*.py -mapper map.py -reducer reduce.py -input /user/ap8246_nyu_edu/task1output.txt -output /user/ap8246_nyu_edu/task2-aoutput/
+
+hadoop jar /usr/lib/hadoop/hadoop-streaming.jar -D mapreduce.job.reduces=2 -file ./*.py -mapper map.py -reducer reduce.py -input /user/ap8246_nyu_edu/task1output.txt -output /user/ap8246_nyu_edu/task2-boutput/
+
+hadoop jar /usr/lib/hadoop/hadoop-streaming.jar -D mapreduce.job.reduces=2 -file ./*.py -mapper map.py -reducer reduce.py -input /user/ap8246_nyu_edu/task1output.txt -output /user/ap8246_nyu_edu/task2-coutput/
+
+hadoop jar /usr/lib/hadoop/hadoop-streaming.jar -D mapreduce.job.reduces=2 -file ./*.py -mapper map.py -reducer reduce.py -input /user/ap8246_nyu_edu/task1output.txt -output /user/ap8246_nyu_edu/task2-doutput/
