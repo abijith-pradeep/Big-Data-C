@@ -33,12 +33,12 @@ mvcdata2 = spark.read.format('csv').options(header='true',inferschema='true').lo
 
 mvcdata2.createOrReplaceTempView("vData")
 
-print("***** Original Dataframe ******")
+# print("***** Original Dataframe ******")
 
-print(mvcdata2.show())
+# print(mvcdata2.show())
 
 
-print("Total data count: ",mvcdata2.count())
+# print("Total data count: ",mvcdata2.count())
 
 
 # ## Grouping Vehicles as Large, Medium and Small
@@ -64,11 +64,11 @@ vehicle_types_sql = "SELECT COLLISION_ID,VEHICLE_TYPE,VEHICLE_MAKE FROM vData WH
 
 vehicle_types_df = spark.sql(vehicle_types_sql)
 
-print("***** Vehicle Group Dataframe ******")
+# print("***** Vehicle Group Dataframe ******")
 
-print(vehicle_types_df.show())
+# print(vehicle_types_df.show())
 
-print("Grouped_vehicles count:", vehicle_types_df.count())
+# print("Grouped_vehicles count:", vehicle_types_df.count())
 
 vehicle_type_rdd = vehicle_types_df.rdd.map(vehicle_classifier).filter(lambda x: x is not None)
 
@@ -85,8 +85,8 @@ vehicle_type_df_final = vehicle_type_df_final.where(vehicle_type_df_final["VEHIC
 
 vehicle_groups_df = vehicle_type_df_final.groupBy("VEHICLE_GROUP").count().withColumnRenamed("count","ACCIDENTS").orderBy("VEHICLE_GROUP")
 
-print("***** Vehicle Group with Accidents count Dataframe ******")
-print(vehicle_groups_df.show())
+# print("***** Vehicle Group with Accidents count Dataframe ******")
+# print(vehicle_groups_df.show())
 
 vehicle_type_df_final.createOrReplaceTempView("vcData")
 
@@ -102,11 +102,11 @@ vehicle_collision_type_sql = "SELECT SUM(CASE UPPER(VEHICLE_GROUP) WHEN 'SMALL' 
 vehicle_collision_type_df = spark.sql(vehicle_collision_type_sql)
 
 
-print("Collision Type dataframe count:",vehicle_collision_type_df.count())
+# print("Collision Type dataframe count:",vehicle_collision_type_df.count())
 
-print("***** Vehicle Collision Type Dataframe ******")
+# print("***** Vehicle Collision Type Dataframe ******")
 
-print(vehicle_collision_type_df.show())
+# print(vehicle_collision_type_df.show())
 
 
 def vehicle_collision_detector(row):
@@ -131,8 +131,8 @@ def vehicle_collision_detector(row):
 
 vehicle_collision_type_rdd = vehicle_collision_type_df.rdd.map(vehicle_collision_detector)
 
-for x in vehicle_collision_type_rdd.take(5):
-    print(x)
+# for x in vehicle_collision_type_rdd.take(5):
+#     print(x)
 
 
 schema = StructType([
@@ -149,30 +149,30 @@ vehicle_collision_type_df_final = spark.createDataFrame(vehicle_collision_type_r
 
 
 vehicle_collision_type_df_final = vehicle_collision_type_df_final.groupBy("ACC_IN_BETWEEN_UNQ").count().withColumnRenamed("count","GROUPS")
-print("***** Vehicle Collision Type Finalised Dataframe ******")
+# print("***** Vehicle Collision Type Finalised Dataframe ******")
 
-print(vehicle_collision_type_df_final.show())
+# print(vehicle_collision_type_df_final.show())
 
-print(vehicle_collision_type_df_final.count())
+# print(vehicle_collision_type_df_final.count())
 
 vehicle_collision_type_df_final_part1 = vehicle_collision_type_df_final.orderBy("GROUPS").limit(19)
 vehicle_collision_type_df_final_part2 = vehicle_collision_type_df_final.orderBy("GROUPS").subtract(vehicle_collision_type_df_final_part1).orderBy("GROUPS").limit(10)
 
-print("***** Vehicle Collision Type Minor part ******")
+# print("***** Vehicle Collision Type Minor part ******")
 
-print(vehicle_collision_type_df_final_part1.show())
+# print(vehicle_collision_type_df_final_part1.show())
 
-print("***** Vehicle Collision Type Major part ******")
+# print("***** Vehicle Collision Type Major part ******")
 
-print(vehicle_collision_type_df_final_part2.show())
+# print(vehicle_collision_type_df_final_part2.show())
 
 vehicle_collision_type_df_final_pandas = vehicle_collision_type_df_final.toPandas()
 
-
-
-fig_pie = px.pie(vehicle_collision_type_df_final_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS", title="Collisions",color_discrete_sequence=px.colors.sequential.RdBu)
+fig_pie = px.pie(vehicle_collision_type_df_final_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS",color_discrete_sequence=px.colors.sequential.RdBu)
 fig_pie.update_layout(height=800, width=800)
-fig_pie.show()
+#fig_pie.show()
+
+
 vehicle_collision_type_df_final_part1_pandas = vehicle_collision_type_df_final_part1.toPandas()
 
 
@@ -180,13 +180,13 @@ vehicle_collision_type_df_final_part2_pandas = vehicle_collision_type_df_final_p
 
 
 
-fig_pie_1 = px.pie(vehicle_collision_type_df_final_part1_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS", title="Collisions",color_discrete_sequence=px.colors.sequential.RdBu)
+fig_pie_1 = px.pie(vehicle_collision_type_df_final_part1_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS",color_discrete_sequence=px.colors.sequential.RdBu)
 fig_pie_1.update_layout(height=800, width=800)
-fig_pie_1.show()
+#fig_pie_1.show()
 
-fig_pie_2 = px.pie(vehicle_collision_type_df_final_part2_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS", title="Collisions",color_discrete_sequence=px.colors.sequential.RdBu)
+fig_pie_2 = px.pie(vehicle_collision_type_df_final_part2_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS",color_discrete_sequence=px.colors.sequential.RdBu)
 fig_pie_2.update_layout(height=800, width=800)
-fig_pie_2.show()
+#fig_pie_2.show()
 
 
 vehicle_group_pandas = vehicle_groups_df.toPandas()
@@ -194,7 +194,7 @@ vehicle_group_pandas = vehicle_groups_df.toPandas()
 fig = px.histogram(vehicle_group_pandas, x="VEHICLE_GROUP", y="ACCIDENTS", title="Vehicle Group vs Accidents")
 
 
-fig.show()
+#fig.show()
 
 
 yearly_vehicle_sql = "SELECT VEHICLE_YEAR, COUNT(*) AS YEARLY_COUNT FROM vData WHERE VEHICLE_YEAR NOT LIKE 'NULL' AND VEHICLE_YEAR > '1111' AND VEHICLE_YEAR < '2025'GROUP BY VEHICLE_YEAR ORDER BY VEHICLE_YEAR"
@@ -208,7 +208,7 @@ print(yearly_vehicle_df.show())
 vehicle_year_pandas = yearly_vehicle_df.toPandas()
 
 fig_line = px.line(vehicle_year_pandas, x="VEHICLE_YEAR", y="YEARLY_COUNT", title="Vehicle Year vs Accidents")
-fig_line.show()
+#fig_line.show()
 
 
 print("*****Contributing Factor Analysis of Unlicensed Drivers*****")
@@ -225,7 +225,7 @@ dl_status_sql = """
 
 
 dl_status_df = spark.sql(dl_status_sql).na.drop()
-dl_status_df.show(150)
+#dl_status_df.show(150)
 
 
 dl_status_pandas = dl_status_df.toPandas()
@@ -233,13 +233,41 @@ dl_status_pandas = dl_status_df.toPandas()
 # Plot the data using Plotly Express
 fig_pie_dl = px.pie(dl_status_pandas, names="CONTRIBUTING_FACTOR_1", values="ACCIDENTS", title="Contributing Factors",color_discrete_sequence=px.colors.sequential.RdBu)
 fig_pie_dl.update_layout(height=1000, width=1000)
-fig_pie_dl.show()
+#fig_pie_dl.show()
 
-st.set_page_config(page_title = "Exploratory Data Analysis", page_icon = ":bar_chart:",layout = "wide")
+def main():
+    st.set_page_config(page_title = "Exploratory Data Analysis", page_icon = ":bar_chart:",layout = "wide")
+    
+    st.title(":bar_chart: EDA")
+    st.markdown('<style>div: block-container{padding-top:1rem;}</style>',unsafe_allow_html = True)
+    
+    st.sidebar.header("Choose your filter:")
+    borough = st.sidebar.multiselect("Pick a Borough", ["Brooklyn","Bronx","Manhattan","Queens","Staten Island"])
+    
+    st.header("Vehicle Collisions Pie")
+    st.plotly_chart(fig_pie)
 
-st.title(":bar_chart: EDA")
-st.markdown('<style>div: block-container{padding-top:1rem;}</style>',unsafe_allow_html = True)
+    if st.button("Expand plot for higher resolution"):
+        st.subheader("Minor vehicle collisions")
+        st.plotly_chart(fig_pie_1)
+        
+        st.subheader("Major Vehicle collisions")
+        st.plotly_chart(fig_pie_2)
 
-st.sidebar.header("Choose your filter:")
 
-borough = st.sidebar.multiselect("Pick a Borough", ["Brooklyn","Bronx","Manhattan","Queens","Staten Island"])
+
+
+    
+
+    st.header("Vehicle Groups Bar")
+    st.plotly_chart(fig)
+
+    st.header("Vehicle Years Line")
+    st.plotly_chart(fig_line)
+
+    st.header("Unlicensed Drivers Plot")
+    st.plotly_chart(fig_pie_dl)
+
+
+if __name__ =='__main__':
+    main()

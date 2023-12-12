@@ -1,12 +1,22 @@
 import streamlit as st
+from pyspark.sql import SparkSession, Row
+from pyspark import SparkConf, SparkContext
+import os
+import pandas as pd
+from pyspark.sql.types import StructType, StructField, StringType, IntegerType
+import plotly.express as px
+import sys
 
-st.set_page_config(page_title = "Exploratory Data Analysis", page_icon = ":bar_chart:",layout = "wide")
 
-st.title(":bar_chart: EDA")
-st.markdown('<style>div: block-container{padding-top:1rem;}</style>',unsafe_allow_html = True)
 
-st.sidebar.header("Choose your filter:")
 
-borough = st.sidebar.multiselect("Pick a Borough", ["Brooklyn","Bronx","Manhattan","Queens","Staten Island"])
+
+
 
 import Spark_Vehicle_Analysis
+
+fig_pie = Spark_Vehicle_Analysis.fig_1()
+
+# fig_pie = px.pie(vehicle_collision_type_df_final_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS", title="Collisions",color_discrete_sequence=px.colors.sequential.RdBu)
+# fig_pie.update_layout(height=800, width=800)
+fig_pie.show()
