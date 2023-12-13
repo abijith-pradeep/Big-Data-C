@@ -8,9 +8,9 @@ from pyspark.sql import SparkSession
 from pyspark import SparkConf, SparkContext
 import os
 import pandas as pd
-os.environ['SPARK_HOME']="/Users/jayasabarishreddyremala/Desktop/NYU/spark"
-os.environ['PYSPARK_DRIVER_PYTHON']='jupyter' 
-os.environ['PYSPARK_DRIVER_PYTHON_OPS']='lab'
+# os.environ['SPARK_HOME']="/Users/jayasabarishreddyremala/Desktop/NYU/spark"
+# os.environ['PYSPARK_DRIVER_PYTHON']='jupyter' 
+# os.environ['PYSPARK_DRIVER_PYTHON_OPS']='lab'
 os.environ['PYSPARK_PYTHON']='python'
 import plotly.express as px
 
@@ -125,13 +125,13 @@ cf_class=spark.sql(cf_class_sql)
 # In[12]:
 
 
-cf_class.repartition(1).write.mode("overwrite").format('csv').options(header='true').save("cf_classification")
+#cf_class.repartition(1).write.mode("overwrite").format('csv').options(header='true').save("cf_classification")
 
 
 # In[13]:
 
 
-cf_class.show(10)
+#cf_class.show(10)
 
 
 # # cf classification - no of accidents
@@ -139,13 +139,13 @@ cf_class.show(10)
 # In[14]:
 
 
-cf_classification_data = spark.read.format('csv').options(header='true',inferschema='true').load("cf_classification.csv")
+#cf_classification_data = spark.read.format('csv').options(header='true',inferschema='true').load("cf_classification.csv")
 
 
 # In[15]:
 
 
-cf_classification_data.createOrReplaceTempView("cfData")
+cf_class.createOrReplaceTempView("cfData")
 
 
 # # No of accidents VS cf_classification_types
@@ -167,7 +167,7 @@ cf_classsification_no_of_accidents = spark.sql(cf_classsification_no_of_accident
 # In[19]:
 
 
-cf_classsification_no_of_accidents.show(40)
+#cf_classsification_no_of_accidents.show(40)
 
 
 # In[ ]:
@@ -195,13 +195,13 @@ cf_classsification_types = spark.sql(cfclassification_types)
 # In[22]:
 
 
-cf_classsification_types.show(40)
+# cf_classsification_types.show(40)
 
 
 # In[23]:
 
 
-cf_classsification_types.repartition(1).write.mode("overwrite").format('csv').options(header='true').save("cf_classification_types")
+# cf_classsification_types.repartition(1).write.mode("overwrite").format('csv').options(header='true').save("cf_classification_types")
 
 
 # In[ ]:
@@ -221,7 +221,7 @@ cf_classsification_types.repartition(1).write.mode("overwrite").format('csv').op
 # In[24]:
 
 
-cf_classsification_no_of_accidents.count()
+#cf_classsification_no_of_accidents.count()
 
 
 # # Borough based classification VS No of accidents
@@ -248,41 +248,41 @@ borough_based_classification=spark.sql(borough_based_classification)
 # In[27]:
 
 
-borough_based_classification.show(500)
+#borough_based_classification.show(500)
 
 
 # In[28]:
 
 
 borough_based_classification_pd=borough_based_classification.toPandas()
-
+borough_based_classification_pd.to_csv("graph_21.csv")
 
 # In[29]:
 
 
 # Assuming borough_based_classification_pd is your DataFrame with columns cf_Classification, No_of_accidents_occurred, and B1
-fig = px.bar(
-    borough_based_classification_pd,
-    x="cf_Classification",
-    y="No_of_accidents_occurred",
-    color="B1",  # Specify the column for hue
-    title="Contributing Factor Classification Analysis Vs Boroughs"
-)
+# fig = px.bar(
+#     borough_based_classification_pd,
+#     x="cf_Classification",
+#     y="No_of_accidents_occurred",
+#     color="B1",  # Specify the column for hue
+#     title="Contributing Factor Classification Analysis Vs Boroughs"
+# )
 
-# Customize the layout
-fig.update_layout(
-    height=1100,
-    width=1100,
-    xaxis_title="Contributing Factors Classification",
-    yaxis_title="Number of Accidents",
-    showlegend=True,
-    yaxis=dict(
-        dtick=20000  # Set the desired interval on the y-axis
-    )
-)
+# # Customize the layout
+# fig.update_layout(
+#     height=1100,
+#     width=1100,
+#     xaxis_title="Contributing Factors Classification",
+#     yaxis_title="Number of Accidents",
+#     showlegend=True,
+#     yaxis=dict(
+#         dtick=20000  # Set the desired interval on the y-axis
+#     )
+# )
 
 # Show the plot
-fig.show()
+# fig.show()
 
 
 # ### For Each cf Classification sum of all accidents
@@ -308,25 +308,25 @@ cf_based_classification_sumofaccidents=spark.sql(cf_based_classification_sumofac
 # In[32]:
 
 
-cf_based_classification_sumofaccidents.show(30)
+# cf_based_classification_sumofaccidents.show(30)
 
 
 # In[33]:
 
 
 cf_based_classification_sumofaccidents_pd = cf_based_classification_sumofaccidents.toPandas()
-
+cf_based_classification_sumofaccidents_pd.to_csv("graph_22.csv")
 
 # In[34]:
 
 
-fig = px.pie(cf_based_classification_sumofaccidents_pd, names="cf_Classification", values="Acc_occurred_in_allboroughs", title="Contributing Factor Classification Accident Analysis in all boroughs")
+# fig = px.pie(cf_based_classification_sumofaccidents_pd, names="cf_Classification", values="Acc_occurred_in_allboroughs", title="Contributing Factor Classification Accident Analysis in all boroughs")
 
-# Customize the layout
-fig.update_layout(height=800, width=1100, showlegend=True)
+# # Customize the layout
+# fig.update_layout(height=800, width=1100, showlegend=True)
 
 # Show the plot
-fig.show()
+# fig.show()
 
 
 # ## For Bronx
@@ -356,23 +356,23 @@ bronx_based_cfclassification = spark.sql(bronx_based_cfclassification)
 # In[37]:
 
 
-bronx_based_cfclassification.show(30)
+# bronx_based_cfclassification.show(30)
 
 
 # In[38]:
 
 
 bronx_based_cfclassification_pd = bronx_based_cfclassification.toPandas()
-
+bronx_based_cfclassification_pd.to_csv("graph_23.csv")
 
 # Assuming dl_status_pandas is your DataFrame with columns CONTRIBUTING_FACTOR_1 and ACCIDENTS
-fig = px.bar(bronx_based_cfclassification_pd,color="cf_Classification", x="cf_Classification", y="No_of_accidents_occurred", title="Contributing Factor Classification Analysis for the BRONX")
+# fig = px.bar(bronx_based_cfclassification_pd,color="cf_Classification", x="cf_Classification", y="No_of_accidents_occurred", title="Contributing Factor Classification Analysis for the BRONX")
 
 # Customize the layout
-fig.update_layout(height=800, width=1100, xaxis_title="Contributing Factors Classification", yaxis_title="Number of Accidents")
+# fig.update_layout(height=800, width=1100, xaxis_title="Contributing Factors Classification", yaxis_title="Number of Accidents")
 
 # Show the plot
-fig.show()
+# fig.show()
 
 
 # ## For Brooklyn
@@ -401,23 +401,23 @@ brooklyn_based_cfclassification = spark.sql(brooklyn_based_cfclassification)
 # In[41]:
 
 
-brooklyn_based_cfclassification.show(30)
+# brooklyn_based_cfclassification.show(30)
 
 
 # In[42]:
 
 
 brooklyn_based_cfclassification_pd = brooklyn_based_cfclassification.toPandas()
-
+brooklyn_based_cfclassification_pd.to_csv("graph_24.csv")
 
 # Assuming dl_status_pandas is your DataFrame with columns CONTRIBUTING_FACTOR_1 and ACCIDENTS
-fig = px.bar(brooklyn_based_cfclassification_pd,color="cf_Classification", x="cf_Classification", y="No_of_accidents_occurred", title="Contributing Factor Classification Analysis for the BROOKLYN")
+# fig = px.bar(brooklyn_based_cfclassification_pd,color="cf_Classification", x="cf_Classification", y="No_of_accidents_occurred", title="Contributing Factor Classification Analysis for the BROOKLYN")
 
 # Customize the layout
-fig.update_layout(height=800, width=1100, xaxis_title="Contributing Factors Classification", yaxis_title="Number of Accidents")
+# fig.update_layout(height=800, width=1100, xaxis_title="Contributing Factors Classification", yaxis_title="Number of Accidents")
 
 # Show the plot
-fig.show()
+# fig.show()
 
 
 # ## For Manhattan
@@ -446,23 +446,23 @@ manhattan_based_cfclassification=spark.sql(manhattan_based_cfclassification)
 # In[45]:
 
 
-manhattan_based_cfclassification.show(30)
+# manhattan_based_cfclassification.show(30)
 
 
 # In[46]:
 
 
 manhattan_based_cfclassification_pd = manhattan_based_cfclassification.toPandas()
-
+manhattan_based_cfclassification_pd.to_csv("graph_25.csv")
 
 # Assuming dl_status_pandas is your DataFrame with columns CONTRIBUTING_FACTOR_1 and ACCIDENTS
-fig = px.bar(manhattan_based_cfclassification_pd,color="cf_Classification", x="cf_Classification", y="No_of_accidents_occurred", title="Contributing Factor Classification Analysis for the MANHATTAN")
+# fig = px.bar(manhattan_based_cfclassification_pd,color="cf_Classification", x="cf_Classification", y="No_of_accidents_occurred", title="Contributing Factor Classification Analysis for the MANHATTAN")
 
-# Customize the layout
-fig.update_layout(height=800, width=1100, xaxis_title="Contributing Factors Classification", yaxis_title="Number of Accidents")
+# # Customize the layout
+# fig.update_layout(height=800, width=1100, xaxis_title="Contributing Factors Classification", yaxis_title="Number of Accidents")
 
-# Show the plot
-fig.show()
+# # Show the plot
+# fig.show()
 
 
 # ## For Queens
@@ -491,23 +491,23 @@ queens_based_cfclassification=spark.sql(queens_based_cfclassification)
 # In[49]:
 
 
-queens_based_cfclassification.show(30)
+# queens_based_cfclassification.show(30)
 
 
 # In[50]:
 
 
 queens_based_cfclassification_pd = queens_based_cfclassification.toPandas()
-
+queens_based_cfclassification_pd.to_csv("graph_26.csv")
 
 # Assuming dl_status_pandas is your DataFrame with columns CONTRIBUTING_FACTOR_1 and ACCIDENTS
 fig = px.bar(queens_based_cfclassification_pd,color="cf_Classification", x="cf_Classification", y="No_of_accidents_occurred", title="Contributing Factor Classification Analysis for the QUEENS")
 
 # Customize the layout
-fig.update_layout(height=800, width=1100, xaxis_title="Contributing Factors Classification", yaxis_title="Number of Accidents")
+# fig.update_layout(height=800, width=1100, xaxis_title="Contributing Factors Classification", yaxis_title="Number of Accidents")
 
 # Show the plot
-fig.show()
+# fig.show()
 
 
 # ## For Staten Island
@@ -536,23 +536,23 @@ staten_island_based_cfclassification=spark.sql(staten_island_based_cfclassificat
 # In[53]:
 
 
-staten_island_based_cfclassification.show(30)
+# staten_island_based_cfclassification.show(30)
 
 
 # In[54]:
 
 
 staten_island_based_cfclassification_pd = staten_island_based_cfclassification.toPandas()
-
+staten_island_based_cfclassification_pd.to_csv("graph_27.csv")
 
 # Assuming dl_status_pandas is your DataFrame with columns CONTRIBUTING_FACTOR_1 and ACCIDENTS
-fig = px.bar(staten_island_based_cfclassification_pd,color="cf_Classification", x="cf_Classification", y="No_of_accidents_occurred", title="Contributing Factor Classification Analysis for the STATEN ISLAND")
+# fig = px.bar(staten_island_based_cfclassification_pd,color="cf_Classification", x="cf_Classification", y="No_of_accidents_occurred", title="Contributing Factor Classification Analysis for the STATEN ISLAND")
 
 # Customize the layout
-fig.update_layout(height=800, width=1100, xaxis_title="Contributing Factors Classification", yaxis_title="Number of Accidents")
+# fig.update_layout(height=800, width=1100, xaxis_title="Contributing Factors Classification", yaxis_title="Number of Accidents")
 
 # Show the plot
-fig.show()
+# fig.show()
 
 
 # In[ ]:

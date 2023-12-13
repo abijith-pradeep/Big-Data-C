@@ -1,13 +1,13 @@
 import streamlit as st
-from pyspark.sql import SparkSession, Row
-from pyspark import SparkConf, SparkContext
 import os
 import pandas as pd
-from pyspark.sql.types import StructType, StructField, StringType, IntegerType
 import plotly.express as px
 import sys
 import seaborn as sns
 import matplotlib.pyplot as plt
+import plotly.subplots as sp
+import plotly.graph_objects as go
+
 
 def main():
     st.set_page_config(page_title = "Exploratory Data Analysis", page_icon = ":bar_chart:",layout = "wide")
@@ -16,23 +16,30 @@ def main():
     st.markdown('<style>div: block-container{padding-top:1rem;}</style>',unsafe_allow_html = True)
     
     st.sidebar.header("Choose your filter:")
-    borough = st.sidebar.selectbox("Pick a choice", ("Pedestrian","Cyclist","Motorist","Vehicle"))
+    analysis = st.sidebar.selectbox("Pick a choice", ("Pedestrian","Cyclist","Motorist","Vehicle"\
+        ,"Contributing Factors","Hotspot"))
 
-    if borough == ("Vehicle"):
+    if analysis == ("Vehicle"):
         vehicle_collision_type_df_final_pandas = pd.read_csv("graph_1.csv")
         st.header("Vehicle Collisions Pie")
         fig_pie = px.pie(vehicle_collision_type_df_final_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS",color_discrete_sequence=px.colors.sequential.RdBu)
         st.plotly_chart(fig_pie)
         if st.toggle("Expand plot for higher resolution"):
-            st.subheader("Minor vehicle collisions")
             vehicle_collision_type_df_final_part1_pandas = pd.read_csv("graph_1_1.csv")
-            fig_pie_1 = px.pie(vehicle_collision_type_df_final_part1_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS",color_discrete_sequence=px.colors.sequential.RdBu)
-            st.plotly_chart(fig_pie_1)
-            
-            st.subheader("Major Vehicle collisions")
+
+            fig_pie_1 = px.pie(vehicle_collision_type_df_final_part1_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS", color_discrete_sequence=px.colors.sequential.RdBu)
+            fig_pie_1.update_layout(title_text='Minor Vehicle Collisions')
+
             vehicle_collision_type_df_final_part2_pandas = pd.read_csv("graph_1_2.csv")
-            fig_pie_2 = px.pie(vehicle_collision_type_df_final_part2_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS",color_discrete_sequence=px.colors.sequential.RdBu)
-            st.plotly_chart(fig_pie_2)
+
+            fig_pie_2 = px.pie(vehicle_collision_type_df_final_part2_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS", color_discrete_sequence=px.colors.sequential.RdBu)
+            fig_pie_2.update_layout(title_text='Major Vehicle Collisions')
+
+            st.subheader("Vehicle Collisions")
+            col1, col2 = st.columns(2)
+
+            col1.plotly_chart(fig_pie_1, use_container_width=True)
+            col2.plotly_chart(fig_pie_2, use_container_width=True)
         st.header("Vehicle Groups Bar")
         vehicle_group_pandas = pd.read_csv("graph_2.csv")
         fig = px.histogram(vehicle_group_pandas, x="VEHICLE_GROUP", y="ACCIDENTS")
@@ -48,7 +55,7 @@ def main():
         fig_pie_dl = px.pie(dl_status_pandas, names="CONTRIBUTING_FACTOR_1", values="ACCIDENTS",color_discrete_sequence=px.colors.sequential.RdBu)
         st.plotly_chart(fig_pie_dl)
     
-    if borough == ("Pedestrian"):
+    if analysis == ("Pedestrian"):
         st.header("Pedestrian Analysis")
         pd_action = pd.read_csv("graph_6.csv")
         fig = px.pie(pd_action, values='VALS', names='PED_ACTION', title='Pedestrian Action',
@@ -117,7 +124,7 @@ def main():
     
         st.pyplot(fig_injuries)
     
-    if borough ==("Cyclist"):
+    if analysis ==("Cyclist"):
         st.header('Cyclist Accidents')
         pd_numcycle = pd.read_csv("graph_13.csv")
 
@@ -170,7 +177,7 @@ def main():
         fig = px.line(getNumOfCyclistAccidents_timely_pd, x='HOUR_OCCUR', y='VALS', markers=True, line_shape='linear',
                 labels={'VALS': 'Count of Accidents','HOUR_OCCUR':'TIME'})
     
-    if borough == ("Motorist"):
+    if analysis == ("Motorist"):
         st.header('Motorist Accidents')
     
         pd_nummotor = pd.read_csv("graph_17.csv")
@@ -227,6 +234,87 @@ def main():
         ax_injuries.legend()
     
         st.pyplot(fig_injuries)
+    if analysis == ("Contributing Factors"):
+        borough_based_classification_pd = pd.read_csv("graph_21.csv")
+
+        st.header("Contributing Factor Classification Analysis Vs Boroughs")
+        fig = px.bar(
+        borough_based_classification_pd,
+        x="cf_Classification",
+        y="No_of_accidents_occurred",
+        color="B1")
+
+        fig.update_layout(
+        xaxis_title="Contributing Factors Classification",
+        yaxis_title="Number of Accidents",
+        height=800,
+        width=1500,
+        showlegend=True,
+        yaxis=dict(
+        dtick=20000)
+        )
+
+        st.plotly_chart(fig)
+
+        st.header("Contributing Factor Classification Accident Analysis in all boroughs")
+
+        cf_based_classification_sumofaccidents_pd = pd.read_csv("graph_22.csv")
+
+        fig = px.pie(cf_based_classification_sumofaccidents_pd, names="cf_Classification", values="Acc_occurred_in_allboroughs")
+        fig.update_layout(height=800, width=1100, showlegend=True)
+
+        st.plotly_chart(fig)
+
+        if st.toggle("Expand to see boroughwise classification"):
+            borough = st.selectbox("Please choose a borough",("Bronx","Brooklyn","Manhattan","Queens","Staten Island"))
+            if borough == ('Bronx'):
+                bronx_based_cfclassification_pd = pd.read_csv("graph_23.csv")
+                st.header("Contributing Factor Classification Analysis for the BRONX")
+                fig = px.bar(bronx_based_cfclassification_pd,color="cf_Classification", x="cf_Classification", y="No_of_accidents_occurred")
+                st.plotly_chart(fig)
+            
+            if borough == ('Brooklyn'):
+                brooklyn_based_cfclassification_pd = pd.read_csv("graph_24.csv")
+                st.header("Contributing Factor Classification Analysis for the BROOKLYN")
+                fig = px.bar(brooklyn_based_cfclassification_pd,color="cf_Classification", x="cf_Classification", y="No_of_accidents_occurred")
+
+                st.plotly_chart(fig)
+
+            if borough == ('Manhattan'):
+                manhattan_based_cfclassification_pd = pd.read_csv("graph_25.csv")
+
+                st.header("Contributing Factor Classification Analysis for the MANHATTAN")
+                fig = px.bar(manhattan_based_cfclassification_pd,color="cf_Classification", x="cf_Classification", y="No_of_accidents_occurred")
+                
+                st.plotly_chart(fig)
+
+            if borough == ('Queens'):
+                queens_based_cfclassification_pd = pd.read_csv("graph_26.csv")
+                
+                st.header("Contributing Factor Classification Analysis for the QUEENS")
+                
+                fig = px.bar(queens_based_cfclassification_pd,color="cf_Classification", x="cf_Classification", y="No_of_accidents_occurred")
+
+                st.plotly_chart(fig)
+
+            if borough == ('Staten Island'):
+                staten_island_based_cfclassification_pd = pd.read_csv("graph_27.csv")
+
+                st.header("Contributing Factor Classification Analysis for the STATEN ISLAND")
+                fig = px.bar(staten_island_based_cfclassification_pd,color="cf_Classification", x="cf_Classification", y="No_of_accidents_occurred")
+
+                st.plotly_chart(fig)
+    if analysis == ('Hotspot'):
+        link_markdown = '[Preview the Interactive Hotspot created on a new tab](https://sabarishreddy99.github.io/BigData_CS-GY-6513_Fall2023_Proj/)'
+        st.markdown(link_markdown, unsafe_allow_html=True)
+
+
+
+
+
+
+
+
 
 if __name__ =='__main__':
     main()
