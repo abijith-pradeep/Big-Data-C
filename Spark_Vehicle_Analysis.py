@@ -168,9 +168,11 @@ vehicle_collision_type_df_final_part2 = vehicle_collision_type_df_final.orderBy(
 
 vehicle_collision_type_df_final_pandas = vehicle_collision_type_df_final.toPandas()
 
-fig_pie = px.pie(vehicle_collision_type_df_final_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS",color_discrete_sequence=px.colors.sequential.RdBu)
-fig_pie.update_layout(height=800, width=800)
-#fig_pie.show()
+#vehicle_collision_type_df_final_pandas.to_csv("graph1.csv")
+
+# fig_pie = px.pie(vehicle_collision_type_df_final_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS",color_discrete_sequence=px.colors.sequential.RdBu)
+# fig_pie.update_layout(height=800, width=800)
+# #fig_pie.show()
 
 
 vehicle_collision_type_df_final_part1_pandas = vehicle_collision_type_df_final_part1.toPandas()
@@ -178,40 +180,43 @@ vehicle_collision_type_df_final_part1_pandas = vehicle_collision_type_df_final_p
 
 vehicle_collision_type_df_final_part2_pandas = vehicle_collision_type_df_final_part2.toPandas()
 
+#vehicle_collision_type_df_final_part1_pandas.to_csv("graph1_1.csv")
+#vehicle_collision_type_df_final_part2_pandas.to_csv("graph1_2.csv")
+
+# fig_pie_1 = px.pie(vehicle_collision_type_df_final_part1_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS",color_discrete_sequence=px.colors.sequential.RdBu)
+# fig_pie_1.update_layout(height=800, width=800)
+# #fig_pie_1.show()
+
+# fig_pie_2 = px.pie(vehicle_collision_type_df_final_part2_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS",color_discrete_sequence=px.colors.sequential.RdBu)
+# fig_pie_2.update_layout(height=800, width=800)
+# #fig_pie_2.show()
 
 
-fig_pie_1 = px.pie(vehicle_collision_type_df_final_part1_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS",color_discrete_sequence=px.colors.sequential.RdBu)
-fig_pie_1.update_layout(height=800, width=800)
-#fig_pie_1.show()
+# vehicle_group_pandas = vehicle_groups_df.toPandas()
+# vehicle_group_pandas.to_csv("graph2.csv")
 
-fig_pie_2 = px.pie(vehicle_collision_type_df_final_part2_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS",color_discrete_sequence=px.colors.sequential.RdBu)
-fig_pie_2.update_layout(height=800, width=800)
-#fig_pie_2.show()
+# fig = px.histogram(vehicle_group_pandas, x="VEHICLE_GROUP", y="ACCIDENTS", title="Vehicle Group vs Accidents")
 
 
-vehicle_group_pandas = vehicle_groups_df.toPandas()
-
-fig = px.histogram(vehicle_group_pandas, x="VEHICLE_GROUP", y="ACCIDENTS", title="Vehicle Group vs Accidents")
-
-
-#fig.show()
+# #fig.show()
 
 
 yearly_vehicle_sql = "SELECT VEHICLE_YEAR, COUNT(*) AS YEARLY_COUNT FROM vData WHERE VEHICLE_YEAR NOT LIKE 'NULL' AND VEHICLE_YEAR > '1111' AND VEHICLE_YEAR < '2025'GROUP BY VEHICLE_YEAR ORDER BY VEHICLE_YEAR"
 
 yearly_vehicle_df = spark.sql(yearly_vehicle_sql)
 
-print("****Vehicle Manafucturing Year classification*****")
+# print("****Vehicle Manafucturing Year classification*****")
 
-print(yearly_vehicle_df.show())
+# print(yearly_vehicle_df.show())
 
-vehicle_year_pandas = yearly_vehicle_df.toPandas()
+# vehicle_year_pandas = yearly_vehicle_df.toPandas()
 
-fig_line = px.line(vehicle_year_pandas, x="VEHICLE_YEAR", y="YEARLY_COUNT", title="Vehicle Year vs Accidents")
-#fig_line.show()
+# vehicle_year_pandas.to_csv("graph3.csv")
 
+# fig_line = px.line(vehicle_year_pandas, x="VEHICLE_YEAR", y="YEARLY_COUNT", title="Vehicle Year vs Accidents")
+# #fig_line.show()
 
-print("*****Contributing Factor Analysis of Unlicensed Drivers*****")
+# print("*****Contributing Factor Analysis of Unlicensed Drivers*****")
 
 dl_status_sql = """
     SELECT CONTRIBUTING_FACTOR_1, COUNT(*) AS ACCIDENTS
@@ -225,49 +230,13 @@ dl_status_sql = """
 
 
 dl_status_df = spark.sql(dl_status_sql).na.drop()
-#dl_status_df.show(150)
+# #dl_status_df.show(150)
 
 
 dl_status_pandas = dl_status_df.toPandas()
+dl_status_pandas.to_csv("graph4.csv")
+# # Plot the data using Plotly Express
+# fig_pie_dl = px.pie(dl_status_pandas, names="CONTRIBUTING_FACTOR_1", values="ACCIDENTS", title="Contributing Factors",color_discrete_sequence=px.colors.sequential.RdBu)
+# fig_pie_dl.update_layout(height=1000, width=1000)
+# #fig_pie_dl.show()
 
-# Plot the data using Plotly Express
-fig_pie_dl = px.pie(dl_status_pandas, names="CONTRIBUTING_FACTOR_1", values="ACCIDENTS", title="Contributing Factors",color_discrete_sequence=px.colors.sequential.RdBu)
-fig_pie_dl.update_layout(height=1000, width=1000)
-#fig_pie_dl.show()
-
-def main():
-    st.set_page_config(page_title = "Exploratory Data Analysis", page_icon = ":bar_chart:",layout = "wide")
-    
-    st.title(":bar_chart: EDA")
-    st.markdown('<style>div: block-container{padding-top:1rem;}</style>',unsafe_allow_html = True)
-    
-    st.sidebar.header("Choose your filter:")
-    borough = st.sidebar.multiselect("Pick a Borough", ["Brooklyn","Bronx","Manhattan","Queens","Staten Island"])
-    
-    st.header("Vehicle Collisions Pie")
-    st.plotly_chart(fig_pie)
-
-    if st.button("Expand plot for higher resolution"):
-        st.subheader("Minor vehicle collisions")
-        st.plotly_chart(fig_pie_1)
-        
-        st.subheader("Major Vehicle collisions")
-        st.plotly_chart(fig_pie_2)
-
-
-
-
-    
-
-    st.header("Vehicle Groups Bar")
-    st.plotly_chart(fig)
-
-    st.header("Vehicle Years Line")
-    st.plotly_chart(fig_line)
-
-    st.header("Unlicensed Drivers Plot")
-    st.plotly_chart(fig_pie_dl)
-
-
-if __name__ =='__main__':
-    main()

@@ -37,7 +37,7 @@ mvcdata2.createOrReplaceTempView("allData")
 # In[5]:
 
 
-mvcdata2.count()
+# mvcdata2.count()
 
 
 # # Analysis on contributing factors - accident count in each borough
@@ -119,7 +119,7 @@ cf_class=spark.sql(cf_class_sql)
 # In[11]:
 
 
-cf_class.count()
+# cf_class.count()
 
 
 # In[12]:
