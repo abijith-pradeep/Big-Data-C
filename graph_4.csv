@@ -1,0 +1,53 @@
+,CONTRIBUTING_FACTOR_1,ACCIDENTS
+0,80,1
+1,Accelerator Defective,9
+2,Aggressive Driving/Road Rage,421
+3,Alcohol Involvement,1641
+4,Animals Action,9
+5,Backing Unsafely,818
+6,Brakes Defective,133
+7,Cell Phone (hand-Held),29
+8,Cell Phone (hands-free),2
+9,Driver Inattention/Distraction,5800
+10,Driver Inexperience,1688
+11,Driverless/Runaway Vehicle,23
+12,Drugs (illegal),122
+13,Eating or Drinking,2
+14,Failure to Keep Right,36
+15,Failure to Yield Right-of-Way,1516
+16,Fatigued/Drowsy,38
+17,Fell Asleep,161
+18,Following Too Closely,1689
+19,Glare,21
+20,Headlights Defective,6
+21,Illnes,56
+22,Lane Marking Improper/Inadequate,8
+23,Listening/Using Headphones,2
+24,Lost Consciousness,47
+25,Obstruction/Debris,25
+26,Other Electronic Device,5
+27,Other Lighting Defects,8
+28,Other Vehicular,389
+29,Outside Car Distraction,40
+30,Oversized Vehicle,23
+31,Passenger Distraction,38
+32,Passing Too Closely,437
+33,Passing or Lane Usage Improper,853
+34,Pavement Defective,23
+35,Pavement Slippery,141
+36,Pedestrian/Bicyclist/Other Pedestrian Error/Confusion,516
+37,Physical Disability,14
+38,Prescription Medication,9
+39,Reaction to Uninvolved Vehicle,220
+40,Shoulders Defective/Improper,1
+41,Steering Failure,40
+42,Tinted Windows,6
+43,Tire Failure/Inadequate,43
+44,Traffic Control Device Improper/Non-Working,4
+45,Traffic Control Disregarded,1044
+46,Turning Improperly,428
+47,Unsafe Lane Changing,563
+48,Unsafe Speed,1210
+49,Using On Board Navigation Device,1
+50,Vehicle Vandalism,2
+51,View Obstructed/Limited,123

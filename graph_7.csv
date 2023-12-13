@@ -1,0 +1,71 @@
+,PED_ACTION,B1,VALS
+0,Crossing With Signal,BROOKLYN,9736
+1,Crossing With Signal,MANHATTAN,7170
+2,Crossing With Signal,QUEENS,6038
+3,"Crossing, No Signal, or Crosswalk",BROOKLYN,4001
+4,Crossing With Signal,BRONX,3514
+5,"Crossing, No Signal, or Crosswalk",QUEENS,3303
+6,Crossing With Signal,STATEN ISLAND,2958
+7,"Crossing, No Signal, or Crosswalk",MANHATTAN,2587
+8,"Crossing, No Signal, or Crosswalk",BRONX,2439
+9,"Crossing, No Signal, Marked Crosswalk",QUEENS,2173
+10,"Crossing, No Signal, Marked Crosswalk",BROOKLYN,1824
+11,Crossing Against Signal,BROOKLYN,1823
+12,Other Actions in Roadway,BROOKLYN,1817
+13,Crossing Against Signal,MANHATTAN,1542
+14,Other Actions in Roadway,MANHATTAN,1536
+15,Other Actions in Roadway,QUEENS,1315
+16,"Crossing, No Signal, or Crosswalk",STATEN ISLAND,1312
+17,"Crossing, No Signal, Marked Crosswalk",BRONX,1147
+18,Not in Roadway,BROOKLYN,1072
+19,Not in Roadway,QUEENS,1031
+20,Other Actions in Roadway,BRONX,1001
+21,Crossing Against Signal,QUEENS,915
+22,"Crossing, No Signal, Marked Crosswalk",MANHATTAN,888
+23,Emerging from in Front of/Behind Parked Vehicle,BROOKLYN,842
+24,Crossing Against Signal,BRONX,755
+25,Not in Roadway,MANHATTAN,701
+26,"Crossing, No Signal, Marked Crosswalk",STATEN ISLAND,695
+27,Not in Roadway,BRONX,634
+28,Emerging from in Front of/Behind Parked Vehicle,QUEENS,623
+29,Crossing Against Signal,STATEN ISLAND,577
+30,Other Actions in Roadway,STATEN ISLAND,491
+31,Emerging from in Front of/Behind Parked Vehicle,MANHATTAN,486
+32,Emerging from in Front of/Behind Parked Vehicle,BRONX,408
+33,Working in Roadway,BROOKLYN,393
+34,Working in Roadway,MANHATTAN,381
+35,Getting On/Off Vehicle Other Than School Bus,BROOKLYN,327
+36,Riding/Walking Along Highway With Traffic,BROOKLYN,285
+37,Not in Roadway,STATEN ISLAND,279
+38,Getting On/Off Vehicle Other Than School Bus,MANHATTAN,251
+39,Emerging from in Front of/Behind Parked Vehicle,STATEN ISLAND,244
+40,Getting On/Off Vehicle Other Than School Bus,QUEENS,226
+41,Riding/Walking Along Highway With Traffic,MANHATTAN,222
+42,Getting On/Off Vehicle Other Than School Bus,BRONX,200
+43,Working in Roadway,QUEENS,193
+44,Working in Roadway,BRONX,135
+45,Playing in Roadway,BROOKLYN,128
+46,Riding/Walking Along Highway With Traffic,QUEENS,113
+47,Playing in Roadway,QUEENS,111
+48,Working in Roadway,STATEN ISLAND,108
+49,Playing in Roadway,BRONX,107
+50,Getting On/Off Vehicle Other Than School Bus,STATEN ISLAND,105
+51,Riding/Walking Along Highway Against Traffic,BROOKLYN,81
+52,Riding/Walking Along Highway With Traffic,BRONX,75
+53,Riding/Walking Along Highway Against Traffic,MANHATTAN,74
+54,Riding/Walking Along Highway With Traffic,STATEN ISLAND,72
+55,Playing in Roadway,MANHATTAN,61
+56,Pushing/Working on Car,QUEENS,59
+57,Pushing/Working on Car,BROOKLYN,54
+58,Pushing/Working on Car,MANHATTAN,45
+59,Riding/Walking Along Highway Against Traffic,QUEENS,44
+60,Playing in Roadway,STATEN ISLAND,44
+61,Going to/From Stopped School Bus,BROOKLYN,37
+62,Pushing/Working on Car,BRONX,31
+63,Riding/Walking Along Highway Against Traffic,BRONX,30
+64,Riding/Walking Along Highway Against Traffic,STATEN ISLAND,19
+65,Pushing/Working on Car,STATEN ISLAND,13
+66,Going to/From Stopped School Bus,BRONX,12
+67,Going to/From Stopped School Bus,QUEENS,8
+68,Going to/From Stopped School Bus,STATEN ISLAND,6
+69,Going to/From Stopped School Bus,MANHATTAN,3

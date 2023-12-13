@@ -1,0 +1,121 @@
+,B1,cf_Classification,No_of_accidents_occurred
+0,BRONX,Animals Action,385
+1,BRONX,Biological Effects,6231
+2,BRONX,Distraction,2078
+3,BRONX,Driver Inattention,43831
+4,BRONX,Driver Incompetence,29633
+5,BRONX,Driverless/Runaway Vehicle,239
+6,BRONX,Failure to Keep Right,320
+7,BRONX,Following Too Closely,15154
+8,BRONX,Lane Marking Improper/Inadequate,113
+9,BRONX,Lighting Reasons,729
+10,BRONX,Mechanical Failure,1767
+11,BRONX,Other Vehicle Intervention,11782
+12,BRONX,Oversized Vehicle,1237
+13,BRONX,Pedestrian/Bicyclist/Other Pedestrian Error/Confusion,1274
+14,BRONX,Reaction to Other Uninvolved Vehicle,124
+15,BRONX,Right-way Rule,11183
+16,BRONX,Substance Abuse,4694
+17,BRONX,Technological Intervention,382
+18,BRONX,Traffic Control Device Improper/Non-Working,92
+19,BRONX,Traffic Rule Avoidance,8204
+20,BRONX,Traffic System Failure,3103
+21,BRONX,Using On Board Navigation Device,26
+22,BRONX,Vehicle Vandalism,31
+23,BRONX,View Obstructed/Limited,2048
+24,BROOKLYN,Animals Action,244
+25,BROOKLYN,Biological Effects,18944
+26,BROOKLYN,Distraction,5156
+27,BROOKLYN,Driver Inattention,97057
+28,BROOKLYN,Driver Incompetence,63698
+29,BROOKLYN,Driverless/Runaway Vehicle,379
+30,BROOKLYN,Failure to Keep Right,778
+31,BROOKLYN,Following Too Closely,36247
+32,BROOKLYN,Lane Marking Improper/Inadequate,183
+33,BROOKLYN,Lighting Reasons,936
+34,BROOKLYN,Mechanical Failure,3251
+35,BROOKLYN,Other Vehicle Intervention,17790
+36,BROOKLYN,Oversized Vehicle,3743
+37,BROOKLYN,Pedestrian/Bicyclist/Other Pedestrian Error/Confusion,2880
+38,BROOKLYN,Reaction to Other Uninvolved Vehicle,327
+39,BROOKLYN,Right-way Rule,32385
+40,BROOKLYN,Substance Abuse,9549
+41,BROOKLYN,Technological Intervention,799
+42,BROOKLYN,Traffic Control Device Improper/Non-Working,222
+43,BROOKLYN,Traffic Rule Avoidance,15542
+44,BROOKLYN,Traffic System Failure,5453
+45,BROOKLYN,Using On Board Navigation Device,29
+46,BROOKLYN,Vehicle Vandalism,39
+47,BROOKLYN,View Obstructed/Limited,3560
+48,MANHATTAN,Animals Action,161
+49,MANHATTAN,Biological Effects,25463
+50,MANHATTAN,Distraction,6027
+51,MANHATTAN,Driver Inattention,100350
+52,MANHATTAN,Driver Incompetence,66878
+53,MANHATTAN,Driverless/Runaway Vehicle,207
+54,MANHATTAN,Failure to Keep Right,686
+55,MANHATTAN,Following Too Closely,41790
+56,MANHATTAN,Lane Marking Improper/Inadequate,285
+57,MANHATTAN,Lighting Reasons,656
+58,MANHATTAN,Mechanical Failure,2600
+59,MANHATTAN,Other Vehicle Intervention,25832
+60,MANHATTAN,Oversized Vehicle,3472
+61,MANHATTAN,Pedestrian/Bicyclist/Other Pedestrian Error/Confusion,2448
+62,MANHATTAN,Reaction to Other Uninvolved Vehicle,354
+63,MANHATTAN,Right-way Rule,23291
+64,MANHATTAN,Substance Abuse,8319
+65,MANHATTAN,Technological Intervention,951
+66,MANHATTAN,Traffic Control Device Improper/Non-Working,156
+67,MANHATTAN,Traffic Rule Avoidance,11448
+68,MANHATTAN,Traffic System Failure,5563
+69,MANHATTAN,Using On Board Navigation Device,28
+70,MANHATTAN,Vehicle Vandalism,19
+71,MANHATTAN,View Obstructed/Limited,2556
+72,QUEENS,Animals Action,321
+73,QUEENS,Biological Effects,14902
+74,QUEENS,Distraction,3454
+75,QUEENS,Driver Inattention,93269
+76,QUEENS,Driver Incompetence,57667
+77,QUEENS,Driverless/Runaway Vehicle,252
+78,QUEENS,Failure to Keep Right,785
+79,QUEENS,Following Too Closely,31714
+80,QUEENS,Lane Marking Improper/Inadequate,167
+81,QUEENS,Lighting Reasons,1093
+82,QUEENS,Mechanical Failure,3037
+83,QUEENS,Other Vehicle Intervention,13224
+84,QUEENS,Oversized Vehicle,2011
+85,QUEENS,Pedestrian/Bicyclist/Other Pedestrian Error/Confusion,1412
+86,QUEENS,Reaction to Other Uninvolved Vehicle,286
+87,QUEENS,Right-way Rule,35234
+88,QUEENS,Substance Abuse,8876
+89,QUEENS,Technological Intervention,522
+90,QUEENS,Traffic Control Device Improper/Non-Working,187
+91,QUEENS,Traffic Rule Avoidance,16231
+92,QUEENS,Traffic System Failure,5644
+93,QUEENS,Using On Board Navigation Device,31
+94,QUEENS,Vehicle Vandalism,32
+95,QUEENS,View Obstructed/Limited,3216
+96,STATEN ISLAND,Animals Action,271
+97,STATEN ISLAND,Biological Effects,6012
+98,STATEN ISLAND,Distraction,1313
+99,STATEN ISLAND,Driver Inattention,39310
+100,STATEN ISLAND,Driver Incompetence,22728
+101,STATEN ISLAND,Driverless/Runaway Vehicle,124
+102,STATEN ISLAND,Failure to Keep Right,332
+103,STATEN ISLAND,Following Too Closely,17697
+104,STATEN ISLAND,Lane Marking Improper/Inadequate,81
+105,STATEN ISLAND,Lighting Reasons,465
+106,STATEN ISLAND,Mechanical Failure,1486
+107,STATEN ISLAND,Other Vehicle Intervention,6461
+108,STATEN ISLAND,Oversized Vehicle,875
+109,STATEN ISLAND,Pedestrian/Bicyclist/Other Pedestrian Error/Confusion,932
+110,STATEN ISLAND,Reaction to Other Uninvolved Vehicle,55
+111,STATEN ISLAND,Right-way Rule,10500
+112,STATEN ISLAND,Substance Abuse,2915
+113,STATEN ISLAND,Technological Intervention,185
+114,STATEN ISLAND,Traffic Control Device Improper/Non-Working,85
+115,STATEN ISLAND,Traffic Rule Avoidance,6779
+116,STATEN ISLAND,Traffic System Failure,2830
+117,STATEN ISLAND,Using On Board Navigation Device,12
+118,STATEN ISLAND,Vehicle Vandalism,6
+119,STATEN ISLAND,View Obstructed/Limited,1166

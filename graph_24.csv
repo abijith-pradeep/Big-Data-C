@@ -1,0 +1,25 @@
+,B1,cf_Classification,No_of_accidents_occurred,Accident_Percentage_wrt_All_Boroughs
+0,BROOKLYN,Animals Action,244,0.02
+1,BROOKLYN,Biological Effects,18944,1.57
+2,BROOKLYN,Distraction,5156,0.43
+3,BROOKLYN,Driver Inattention,97057,8.02
+4,BROOKLYN,Driver Incompetence,63698,5.27
+5,BROOKLYN,Driverless/Runaway Vehicle,379,0.03
+6,BROOKLYN,Failure to Keep Right,778,0.06
+7,BROOKLYN,Following Too Closely,36247,3.0
+8,BROOKLYN,Lane Marking Improper/Inadequate,183,0.02
+9,BROOKLYN,Lighting Reasons,936,0.08
+10,BROOKLYN,Mechanical Failure,3251,0.27
+11,BROOKLYN,Other Vehicle Intervention,17790,1.47
+12,BROOKLYN,Oversized Vehicle,3743,0.31
+13,BROOKLYN,Pedestrian/Bicyclist/Other Pedestrian Error/Confusion,2880,0.24
+14,BROOKLYN,Reaction to Other Uninvolved Vehicle,327,0.03
+15,BROOKLYN,Right-way Rule,32385,2.68
+16,BROOKLYN,Substance Abuse,9549,0.79
+17,BROOKLYN,Technological Intervention,799,0.07
+18,BROOKLYN,Traffic Control Device Improper/Non-Working,222,0.02
+19,BROOKLYN,Traffic Rule Avoidance,15542,1.28
+20,BROOKLYN,Traffic System Failure,5453,0.45
+21,BROOKLYN,Using On Board Navigation Device,29,0.0
+22,BROOKLYN,Vehicle Vandalism,39,0.0
+23,BROOKLYN,View Obstructed/Limited,3560,0.29

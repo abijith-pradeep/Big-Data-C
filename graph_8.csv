@@ -1,0 +1,373 @@
+,PED_ACTION,HOUR_OCCUR,VALS
+0,Crossing Against Signal,17,429
+1,Crossing Against Signal,18,413
+2,Crossing Against Signal,19,384
+3,Crossing Against Signal,15,374
+4,Crossing Against Signal,16,358
+5,Crossing Against Signal,14,346
+6,Crossing Against Signal,20,330
+7,Crossing Against Signal,8,301
+8,Crossing Against Signal,21,300
+9,Crossing Against Signal,13,243
+10,Crossing Against Signal,22,234
+11,Crossing Against Signal,0,228
+12,Crossing Against Signal,12,223
+13,Crossing Against Signal,11,203
+14,Crossing Against Signal,9,198
+15,Crossing Against Signal,23,192
+16,Crossing Against Signal,7,182
+17,Crossing Against Signal,10,154
+18,Crossing Against Signal,6,151
+19,Crossing Against Signal,1,93
+20,Crossing Against Signal,2,76
+21,Crossing Against Signal,4,71
+22,Crossing Against Signal,5,70
+23,Crossing Against Signal,3,59
+24,Crossing With Signal,18,2446
+25,Crossing With Signal,17,2433
+26,Crossing With Signal,19,2148
+27,Crossing With Signal,16,1825
+28,Crossing With Signal,20,1802
+29,Crossing With Signal,15,1786
+30,Crossing With Signal,8,1655
+31,Crossing With Signal,14,1625
+32,Crossing With Signal,13,1436
+33,Crossing With Signal,21,1406
+34,Crossing With Signal,12,1379
+35,Crossing With Signal,9,1372
+36,Crossing With Signal,11,1320
+37,Crossing With Signal,10,1239
+38,Crossing With Signal,7,1069
+39,Crossing With Signal,22,1039
+40,Crossing With Signal,6,855
+41,Crossing With Signal,0,799
+42,Crossing With Signal,23,721
+43,Crossing With Signal,5,333
+44,Crossing With Signal,1,247
+45,Crossing With Signal,4,173
+46,Crossing With Signal,2,169
+47,Crossing With Signal,3,139
+48,"Crossing, No Signal, Marked Crosswalk",17,614
+49,"Crossing, No Signal, Marked Crosswalk",18,608
+50,"Crossing, No Signal, Marked Crosswalk",8,513
+51,"Crossing, No Signal, Marked Crosswalk",19,474
+52,"Crossing, No Signal, Marked Crosswalk",16,411
+53,"Crossing, No Signal, Marked Crosswalk",20,402
+54,"Crossing, No Signal, Marked Crosswalk",14,374
+55,"Crossing, No Signal, Marked Crosswalk",15,374
+56,"Crossing, No Signal, Marked Crosswalk",21,317
+57,"Crossing, No Signal, Marked Crosswalk",9,305
+58,"Crossing, No Signal, Marked Crosswalk",7,297
+59,"Crossing, No Signal, Marked Crosswalk",12,295
+60,"Crossing, No Signal, Marked Crosswalk",13,276
+61,"Crossing, No Signal, Marked Crosswalk",11,273
+62,"Crossing, No Signal, Marked Crosswalk",22,220
+63,"Crossing, No Signal, Marked Crosswalk",10,209
+64,"Crossing, No Signal, Marked Crosswalk",6,183
+65,"Crossing, No Signal, Marked Crosswalk",0,169
+66,"Crossing, No Signal, Marked Crosswalk",23,166
+67,"Crossing, No Signal, Marked Crosswalk",5,79
+68,"Crossing, No Signal, Marked Crosswalk",1,51
+69,"Crossing, No Signal, Marked Crosswalk",4,44
+70,"Crossing, No Signal, Marked Crosswalk",3,39
+71,"Crossing, No Signal, Marked Crosswalk",2,34
+72,"Crossing, No Signal, or Crosswalk",17,1200
+73,"Crossing, No Signal, or Crosswalk",18,1091
+74,"Crossing, No Signal, or Crosswalk",16,1053
+75,"Crossing, No Signal, or Crosswalk",15,973
+76,"Crossing, No Signal, or Crosswalk",14,942
+77,"Crossing, No Signal, or Crosswalk",19,923
+78,"Crossing, No Signal, or Crosswalk",20,814
+79,"Crossing, No Signal, or Crosswalk",8,707
+80,"Crossing, No Signal, or Crosswalk",12,637
+81,"Crossing, No Signal, or Crosswalk",13,631
+82,"Crossing, No Signal, or Crosswalk",21,615
+83,"Crossing, No Signal, or Crosswalk",11,515
+84,"Crossing, No Signal, or Crosswalk",9,510
+85,"Crossing, No Signal, or Crosswalk",22,488
+86,"Crossing, No Signal, or Crosswalk",7,456
+87,"Crossing, No Signal, or Crosswalk",10,454
+88,"Crossing, No Signal, or Crosswalk",0,399
+89,"Crossing, No Signal, or Crosswalk",23,334
+90,"Crossing, No Signal, or Crosswalk",6,254
+91,"Crossing, No Signal, or Crosswalk",1,161
+92,"Crossing, No Signal, or Crosswalk",5,149
+93,"Crossing, No Signal, or Crosswalk",4,119
+94,"Crossing, No Signal, or Crosswalk",2,119
+95,"Crossing, No Signal, or Crosswalk",3,98
+96,Does Not Apply,17,303
+97,Does Not Apply,18,254
+98,Does Not Apply,16,242
+99,Does Not Apply,19,238
+100,Does Not Apply,14,227
+101,Does Not Apply,15,222
+102,Does Not Apply,13,216
+103,Does Not Apply,12,196
+104,Does Not Apply,20,174
+105,Does Not Apply,8,169
+106,Does Not Apply,11,168
+107,Does Not Apply,9,154
+108,Does Not Apply,21,142
+109,Does Not Apply,10,138
+110,Does Not Apply,0,122
+111,Does Not Apply,22,113
+112,Does Not Apply,23,110
+113,Does Not Apply,7,103
+114,Does Not Apply,1,55
+115,Does Not Apply,6,52
+116,Does Not Apply,5,40
+117,Does Not Apply,3,38
+118,Does Not Apply,2,37
+119,Does Not Apply,4,33
+120,Emerging from in Front of/Behind Parked Vehicle,14,231
+121,Emerging from in Front of/Behind Parked Vehicle,17,217
+122,Emerging from in Front of/Behind Parked Vehicle,15,201
+123,Emerging from in Front of/Behind Parked Vehicle,18,200
+124,Emerging from in Front of/Behind Parked Vehicle,16,192
+125,Emerging from in Front of/Behind Parked Vehicle,19,156
+126,Emerging from in Front of/Behind Parked Vehicle,12,150
+127,Emerging from in Front of/Behind Parked Vehicle,11,136
+128,Emerging from in Front of/Behind Parked Vehicle,13,135
+129,Emerging from in Front of/Behind Parked Vehicle,20,123
+130,Emerging from in Front of/Behind Parked Vehicle,8,122
+131,Emerging from in Front of/Behind Parked Vehicle,9,105
+132,Emerging from in Front of/Behind Parked Vehicle,10,105
+133,Emerging from in Front of/Behind Parked Vehicle,0,100
+134,Emerging from in Front of/Behind Parked Vehicle,21,93
+135,Emerging from in Front of/Behind Parked Vehicle,7,76
+136,Emerging from in Front of/Behind Parked Vehicle,22,72
+137,Emerging from in Front of/Behind Parked Vehicle,23,55
+138,Emerging from in Front of/Behind Parked Vehicle,1,33
+139,Emerging from in Front of/Behind Parked Vehicle,6,31
+140,Emerging from in Front of/Behind Parked Vehicle,2,20
+141,Emerging from in Front of/Behind Parked Vehicle,4,18
+142,Emerging from in Front of/Behind Parked Vehicle,5,17
+143,Emerging from in Front of/Behind Parked Vehicle,3,15
+144,Getting On/Off Vehicle Other Than School Bus,18,68
+145,Getting On/Off Vehicle Other Than School Bus,15,66
+146,Getting On/Off Vehicle Other Than School Bus,14,65
+147,Getting On/Off Vehicle Other Than School Bus,16,64
+148,Getting On/Off Vehicle Other Than School Bus,17,63
+149,Getting On/Off Vehicle Other Than School Bus,21,59
+150,Getting On/Off Vehicle Other Than School Bus,12,58
+151,Getting On/Off Vehicle Other Than School Bus,10,57
+152,Getting On/Off Vehicle Other Than School Bus,8,56
+153,Getting On/Off Vehicle Other Than School Bus,13,55
+154,Getting On/Off Vehicle Other Than School Bus,19,54
+155,Getting On/Off Vehicle Other Than School Bus,11,52
+156,Getting On/Off Vehicle Other Than School Bus,20,49
+157,Getting On/Off Vehicle Other Than School Bus,22,45
+158,Getting On/Off Vehicle Other Than School Bus,23,43
+159,Getting On/Off Vehicle Other Than School Bus,0,42
+160,Getting On/Off Vehicle Other Than School Bus,9,38
+161,Getting On/Off Vehicle Other Than School Bus,7,35
+162,Getting On/Off Vehicle Other Than School Bus,1,31
+163,Getting On/Off Vehicle Other Than School Bus,2,31
+164,Getting On/Off Vehicle Other Than School Bus,4,29
+165,Getting On/Off Vehicle Other Than School Bus,3,20
+166,Getting On/Off Vehicle Other Than School Bus,6,16
+167,Getting On/Off Vehicle Other Than School Bus,5,13
+168,Going to/From Stopped School Bus,16,13
+169,Going to/From Stopped School Bus,8,10
+170,Going to/From Stopped School Bus,15,8
+171,Going to/From Stopped School Bus,17,6
+172,Going to/From Stopped School Bus,14,5
+173,Going to/From Stopped School Bus,13,4
+174,Going to/From Stopped School Bus,18,4
+175,Going to/From Stopped School Bus,7,4
+176,Going to/From Stopped School Bus,9,4
+177,Going to/From Stopped School Bus,0,2
+178,Going to/From Stopped School Bus,6,2
+179,Going to/From Stopped School Bus,10,2
+180,Going to/From Stopped School Bus,23,1
+181,Going to/From Stopped School Bus,20,1
+182,Not in Roadway,15,352
+183,Not in Roadway,17,282
+184,Not in Roadway,16,268
+185,Not in Roadway,18,255
+186,Not in Roadway,14,245
+187,Not in Roadway,12,234
+188,Not in Roadway,11,230
+189,Not in Roadway,13,226
+190,Not in Roadway,10,203
+191,Not in Roadway,19,195
+192,Not in Roadway,8,193
+193,Not in Roadway,20,183
+194,Not in Roadway,21,151
+195,Not in Roadway,9,144
+196,Not in Roadway,0,98
+197,Not in Roadway,22,92
+198,Not in Roadway,7,74
+199,Not in Roadway,23,61
+200,Not in Roadway,2,53
+201,Not in Roadway,6,51
+202,Not in Roadway,4,43
+203,Not in Roadway,1,39
+204,Not in Roadway,5,26
+205,Not in Roadway,3,19
+206,Other Actions in Roadway,17,427
+207,Other Actions in Roadway,16,407
+208,Other Actions in Roadway,15,402
+209,Other Actions in Roadway,18,400
+210,Other Actions in Roadway,12,363
+211,Other Actions in Roadway,19,354
+212,Other Actions in Roadway,14,349
+213,Other Actions in Roadway,13,347
+214,Other Actions in Roadway,20,321
+215,Other Actions in Roadway,11,303
+216,Other Actions in Roadway,10,264
+217,Other Actions in Roadway,21,247
+218,Other Actions in Roadway,0,246
+219,Other Actions in Roadway,9,243
+220,Other Actions in Roadway,8,239
+221,Other Actions in Roadway,22,230
+222,Other Actions in Roadway,23,188
+223,Other Actions in Roadway,7,157
+224,Other Actions in Roadway,1,151
+225,Other Actions in Roadway,4,131
+226,Other Actions in Roadway,3,107
+227,Other Actions in Roadway,2,106
+228,Other Actions in Roadway,6,102
+229,Other Actions in Roadway,5,76
+230,Playing in Roadway,18,63
+231,Playing in Roadway,15,61
+232,Playing in Roadway,17,53
+233,Playing in Roadway,16,49
+234,Playing in Roadway,19,40
+235,Playing in Roadway,20,40
+236,Playing in Roadway,14,36
+237,Playing in Roadway,13,18
+238,Playing in Roadway,21,18
+239,Playing in Roadway,12,13
+240,Playing in Roadway,0,10
+241,Playing in Roadway,23,9
+242,Playing in Roadway,22,8
+243,Playing in Roadway,8,7
+244,Playing in Roadway,11,6
+245,Playing in Roadway,10,4
+246,Playing in Roadway,4,4
+247,Playing in Roadway,7,4
+248,Playing in Roadway,9,4
+249,Playing in Roadway,1,2
+250,Playing in Roadway,3,1
+251,Playing in Roadway,5,1
+252,Pushing/Working on Car,18,15
+253,Pushing/Working on Car,12,14
+254,Pushing/Working on Car,13,13
+255,Pushing/Working on Car,15,13
+256,Pushing/Working on Car,16,13
+257,Pushing/Working on Car,11,13
+258,Pushing/Working on Car,19,12
+259,Pushing/Working on Car,10,12
+260,Pushing/Working on Car,8,12
+261,Pushing/Working on Car,20,11
+262,Pushing/Working on Car,17,10
+263,Pushing/Working on Car,14,9
+264,Pushing/Working on Car,21,8
+265,Pushing/Working on Car,6,8
+266,Pushing/Working on Car,9,8
+267,Pushing/Working on Car,1,6
+268,Pushing/Working on Car,5,5
+269,Pushing/Working on Car,22,5
+270,Pushing/Working on Car,0,5
+271,Pushing/Working on Car,23,3
+272,Pushing/Working on Car,7,3
+273,Pushing/Working on Car,4,2
+274,Pushing/Working on Car,3,1
+275,Pushing/Working on Car,2,1
+276,Riding/Walking Along Highway Against Traffic,0,21
+277,Riding/Walking Along Highway Against Traffic,17,17
+278,Riding/Walking Along Highway Against Traffic,18,16
+279,Riding/Walking Along Highway Against Traffic,22,16
+280,Riding/Walking Along Highway Against Traffic,20,16
+281,Riding/Walking Along Highway Against Traffic,15,15
+282,Riding/Walking Along Highway Against Traffic,14,13
+283,Riding/Walking Along Highway Against Traffic,8,12
+284,Riding/Walking Along Highway Against Traffic,16,12
+285,Riding/Walking Along Highway Against Traffic,12,12
+286,Riding/Walking Along Highway Against Traffic,21,12
+287,Riding/Walking Along Highway Against Traffic,13,11
+288,Riding/Walking Along Highway Against Traffic,19,10
+289,Riding/Walking Along Highway Against Traffic,10,9
+290,Riding/Walking Along Highway Against Traffic,23,9
+291,Riding/Walking Along Highway Against Traffic,11,7
+292,Riding/Walking Along Highway Against Traffic,9,7
+293,Riding/Walking Along Highway Against Traffic,7,6
+294,Riding/Walking Along Highway Against Traffic,6,5
+295,Riding/Walking Along Highway Against Traffic,1,5
+296,Riding/Walking Along Highway Against Traffic,3,5
+297,Riding/Walking Along Highway Against Traffic,4,5
+298,Riding/Walking Along Highway Against Traffic,2,4
+299,Riding/Walking Along Highway Against Traffic,5,3
+300,Riding/Walking Along Highway With Traffic,18,62
+301,Riding/Walking Along Highway With Traffic,15,59
+302,Riding/Walking Along Highway With Traffic,17,58
+303,Riding/Walking Along Highway With Traffic,16,54
+304,Riding/Walking Along Highway With Traffic,14,54
+305,Riding/Walking Along Highway With Traffic,19,52
+306,Riding/Walking Along Highway With Traffic,12,47
+307,Riding/Walking Along Highway With Traffic,13,45
+308,Riding/Walking Along Highway With Traffic,10,34
+309,Riding/Walking Along Highway With Traffic,9,32
+310,Riding/Walking Along Highway With Traffic,20,32
+311,Riding/Walking Along Highway With Traffic,22,30
+312,Riding/Walking Along Highway With Traffic,11,28
+313,Riding/Walking Along Highway With Traffic,0,26
+314,Riding/Walking Along Highway With Traffic,23,24
+315,Riding/Walking Along Highway With Traffic,8,24
+316,Riding/Walking Along Highway With Traffic,7,23
+317,Riding/Walking Along Highway With Traffic,21,20
+318,Riding/Walking Along Highway With Traffic,6,14
+319,Riding/Walking Along Highway With Traffic,1,13
+320,Riding/Walking Along Highway With Traffic,4,11
+321,Riding/Walking Along Highway With Traffic,2,10
+322,Riding/Walking Along Highway With Traffic,3,10
+323,Riding/Walking Along Highway With Traffic,5,5
+324,Unknown,17,293
+325,Unknown,18,277
+326,Unknown,19,256
+327,Unknown,15,255
+328,Unknown,20,238
+329,Unknown,16,210
+330,Unknown,14,210
+331,Unknown,21,196
+332,Unknown,12,181
+333,Unknown,0,179
+334,Unknown,22,167
+335,Unknown,13,153
+336,Unknown,9,153
+337,Unknown,11,147
+338,Unknown,8,146
+339,Unknown,23,120
+340,Unknown,10,109
+341,Unknown,7,101
+342,Unknown,6,91
+343,Unknown,4,74
+344,Unknown,2,63
+345,Unknown,1,60
+346,Unknown,3,54
+347,Unknown,5,54
+348,Working in Roadway,8,112
+349,Working in Roadway,14,101
+350,Working in Roadway,10,94
+351,Working in Roadway,9,86
+352,Working in Roadway,12,85
+353,Working in Roadway,13,84
+354,Working in Roadway,15,80
+355,Working in Roadway,11,77
+356,Working in Roadway,17,68
+357,Working in Roadway,16,64
+358,Working in Roadway,7,48
+359,Working in Roadway,18,44
+360,Working in Roadway,0,40
+361,Working in Roadway,19,34
+362,Working in Roadway,21,29
+363,Working in Roadway,20,26
+364,Working in Roadway,6,25
+365,Working in Roadway,3,25
+366,Working in Roadway,23,23
+367,Working in Roadway,22,19
+368,Working in Roadway,1,17
+369,Working in Roadway,4,13
+370,Working in Roadway,2,13
+371,Working in Roadway,5,3

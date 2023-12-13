@@ -1,0 +1,15 @@
+,PED_ACTION,VALS
+0,Crossing With Signal,29416
+1,"Crossing, No Signal, or Crosswalk",13642
+2,"Crossing, No Signal, Marked Crosswalk",6727
+3,Other Actions in Roadway,6160
+4,Crossing Against Signal,5612
+5,Not in Roadway,3717
+6,Emerging from in Front of/Behind Parked Vehicle,2603
+7,Working in Roadway,1210
+8,Getting On/Off Vehicle Other Than School Bus,1109
+9,Riding/Walking Along Highway With Traffic,767
+10,Playing in Roadway,451
+11,Riding/Walking Along Highway Against Traffic,248
+12,Pushing/Working on Car,202
+13,Going to/From Stopped School Bus,66

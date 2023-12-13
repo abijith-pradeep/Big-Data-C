@@ -1,0 +1,25 @@
+,B1,cf_Classification,No_of_accidents_occurred,Accident_Percentage_wrt_All_Boroughs
+0,QUEENS,Animals Action,321,0.03
+1,QUEENS,Biological Effects,14902,1.23
+2,QUEENS,Distraction,3454,0.29
+3,QUEENS,Driver Inattention,93269,7.71
+4,QUEENS,Driver Incompetence,57667,4.77
+5,QUEENS,Driverless/Runaway Vehicle,252,0.02
+6,QUEENS,Failure to Keep Right,785,0.06
+7,QUEENS,Following Too Closely,31714,2.62
+8,QUEENS,Lane Marking Improper/Inadequate,167,0.01
+9,QUEENS,Lighting Reasons,1093,0.09
+10,QUEENS,Mechanical Failure,3037,0.25
+11,QUEENS,Other Vehicle Intervention,13224,1.09
+12,QUEENS,Oversized Vehicle,2011,0.17
+13,QUEENS,Pedestrian/Bicyclist/Other Pedestrian Error/Confusion,1412,0.12
+14,QUEENS,Reaction to Other Uninvolved Vehicle,286,0.02
+15,QUEENS,Right-way Rule,35234,2.91
+16,QUEENS,Substance Abuse,8876,0.73
+17,QUEENS,Technological Intervention,522,0.04
+18,QUEENS,Traffic Control Device Improper/Non-Working,187,0.02
+19,QUEENS,Traffic Rule Avoidance,16231,1.34
+20,QUEENS,Traffic System Failure,5644,0.47
+21,QUEENS,Using On Board Navigation Device,31,0.0
+22,QUEENS,Vehicle Vandalism,32,0.0
+23,QUEENS,View Obstructed/Limited,3216,0.27

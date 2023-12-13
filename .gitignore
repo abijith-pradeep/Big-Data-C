@@ -1,3 +1,7 @@
 __pycache__
 .ipynb_checkpoints
-*.csv
+nonull.csv
+person_merged_accident.csv
+vehicle.csv
+Motor_Vehicle_Collisions_-_Crashes_20231117.csv
+Motor_Vehicle_Collisions_-_Vehicles_20231117.csv

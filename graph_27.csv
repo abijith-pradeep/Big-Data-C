@@ -1,0 +1,25 @@
+,B1,cf_Classification,No_of_accidents_occurred,Accident_Percentage_wrt_All_Boroughs
+0,STATEN ISLAND,Animals Action,271,0.02
+1,STATEN ISLAND,Biological Effects,6012,0.5
+2,STATEN ISLAND,Distraction,1313,0.11
+3,STATEN ISLAND,Driver Inattention,39310,3.25
+4,STATEN ISLAND,Driver Incompetence,22728,1.88
+5,STATEN ISLAND,Driverless/Runaway Vehicle,124,0.01
+6,STATEN ISLAND,Failure to Keep Right,332,0.03
+7,STATEN ISLAND,Following Too Closely,17697,1.46
+8,STATEN ISLAND,Lane Marking Improper/Inadequate,81,0.01
+9,STATEN ISLAND,Lighting Reasons,465,0.04
+10,STATEN ISLAND,Mechanical Failure,1486,0.12
+11,STATEN ISLAND,Other Vehicle Intervention,6461,0.53
+12,STATEN ISLAND,Oversized Vehicle,875,0.07
+13,STATEN ISLAND,Pedestrian/Bicyclist/Other Pedestrian Error/Confusion,932,0.08
+14,STATEN ISLAND,Reaction to Other Uninvolved Vehicle,55,0.0
+15,STATEN ISLAND,Right-way Rule,10500,0.87
+16,STATEN ISLAND,Substance Abuse,2915,0.24
+17,STATEN ISLAND,Technological Intervention,185,0.02
+18,STATEN ISLAND,Traffic Control Device Improper/Non-Working,85,0.01
+19,STATEN ISLAND,Traffic Rule Avoidance,6779,0.56
+20,STATEN ISLAND,Traffic System Failure,2830,0.23
+21,STATEN ISLAND,Using On Board Navigation Device,12,0.0
+22,STATEN ISLAND,Vehicle Vandalism,6,0.0
+23,STATEN ISLAND,View Obstructed/Limited,1166,0.1

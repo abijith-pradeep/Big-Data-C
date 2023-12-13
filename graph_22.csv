@@ -1,0 +1,25 @@
+,cf_Classification,Acc_occurred_in_allboroughs
+0,Animals Action,1382
+1,Biological Effects,71552
+2,Distraction,18028
+3,Driver Inattention,373817
+4,Driver Incompetence,240604
+5,Driverless/Runaway Vehicle,1201
+6,Failure to Keep Right,2901
+7,Following Too Closely,142602
+8,Lane Marking Improper/Inadequate,829
+9,Lighting Reasons,3879
+10,Mechanical Failure,12141
+11,Other Vehicle Intervention,75089
+12,Oversized Vehicle,11338
+13,Pedestrian/Bicyclist/Other Pedestrian Error/Confusion,8946
+14,Reaction to Other Uninvolved Vehicle,1146
+15,Right-way Rule,112593
+16,Substance Abuse,34353
+17,Technological Intervention,2839
+18,Traffic Control Device Improper/Non-Working,742
+19,Traffic Rule Avoidance,58204
+20,Traffic System Failure,22593
+21,Using On Board Navigation Device,126
+22,Vehicle Vandalism,127
+23,View Obstructed/Limited,12546

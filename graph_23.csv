@@ -1,0 +1,25 @@
+,B1,cf_Classification,No_of_accidents_occurred,Accident_Percentage_wrt_All_Boroughs
+0,BRONX,Animals Action,385,0.03
+1,BRONX,Biological Effects,6231,0.52
+2,BRONX,Distraction,2078,0.17
+3,BRONX,Driver Inattention,43831,3.62
+4,BRONX,Driver Incompetence,29633,2.45
+5,BRONX,Driverless/Runaway Vehicle,239,0.02
+6,BRONX,Failure to Keep Right,320,0.03
+7,BRONX,Following Too Closely,15154,1.25
+8,BRONX,Lane Marking Improper/Inadequate,113,0.01
+9,BRONX,Lighting Reasons,729,0.06
+10,BRONX,Mechanical Failure,1767,0.15
+11,BRONX,Other Vehicle Intervention,11782,0.97
+12,BRONX,Oversized Vehicle,1237,0.1
+13,BRONX,Pedestrian/Bicyclist/Other Pedestrian Error/Confusion,1274,0.11
+14,BRONX,Reaction to Other Uninvolved Vehicle,124,0.01
+15,BRONX,Right-way Rule,11183,0.92
+16,BRONX,Substance Abuse,4694,0.39
+17,BRONX,Technological Intervention,382,0.03
+18,BRONX,Traffic Control Device Improper/Non-Working,92,0.01
+19,BRONX,Traffic Rule Avoidance,8204,0.68
+20,BRONX,Traffic System Failure,3103,0.26
+21,BRONX,Using On Board Navigation Device,26,0.0
+22,BRONX,Vehicle Vandalism,31,0.0
+23,BRONX,View Obstructed/Limited,2048,0.17

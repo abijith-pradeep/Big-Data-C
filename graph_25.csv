@@ -1,0 +1,25 @@
+,B1,cf_Classification,No_of_accidents_occurred,Accident_Percentage_wrt_All_Boroughs
+0,MANHATTAN,Animals Action,161,0.01
+1,MANHATTAN,Biological Effects,25463,2.11
+2,MANHATTAN,Distraction,6027,0.5
+3,MANHATTAN,Driver Inattention,100350,8.3
+4,MANHATTAN,Driver Incompetence,66878,5.53
+5,MANHATTAN,Driverless/Runaway Vehicle,207,0.02
+6,MANHATTAN,Failure to Keep Right,686,0.06
+7,MANHATTAN,Following Too Closely,41790,3.45
+8,MANHATTAN,Lane Marking Improper/Inadequate,285,0.02
+9,MANHATTAN,Lighting Reasons,656,0.05
+10,MANHATTAN,Mechanical Failure,2600,0.21
+11,MANHATTAN,Other Vehicle Intervention,25832,2.14
+12,MANHATTAN,Oversized Vehicle,3472,0.29
+13,MANHATTAN,Pedestrian/Bicyclist/Other Pedestrian Error/Confusion,2448,0.2
+14,MANHATTAN,Reaction to Other Uninvolved Vehicle,354,0.03
+15,MANHATTAN,Right-way Rule,23291,1.93
+16,MANHATTAN,Substance Abuse,8319,0.69
+17,MANHATTAN,Technological Intervention,951,0.08
+18,MANHATTAN,Traffic Control Device Improper/Non-Working,156,0.01
+19,MANHATTAN,Traffic Rule Avoidance,11448,0.95
+20,MANHATTAN,Traffic System Failure,5563,0.46
+21,MANHATTAN,Using On Board Navigation Device,28,0.0
+22,MANHATTAN,Vehicle Vandalism,19,0.0
+23,MANHATTAN,View Obstructed/Limited,2556,0.21
