@@ -315,12 +315,12 @@ def main():
                 st.plotly_chart(fig)
     elif analysis == ('Hotspot'):
         st.header("Accident hotspots with heatmap")
-        with open("C:/Users/321ni/Desktop/Year 2023- 2024/Big Data C/hotspotHeatMap.html") as f:
+        with open("hotspotHeatMap.html") as f:
             doc1 = f.read()
         st.components.v1.html(doc1,height = 600)
         if st.toggle("Toggle to view without heatmap"):
             st.header("Accident hotspots without heatmap")
-            with open("C:/Users/321ni/Desktop/Year 2023- 2024/Big Data C/index.html") as f2:
+            with open("index.html") as f2:
                 doc2 = f2.read()
             st.components.v1.html(doc2,height = 600)
 
