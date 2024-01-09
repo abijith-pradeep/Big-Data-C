@@ -12,27 +12,36 @@ import plotly.graph_objects as go
 def main():
     st.set_page_config(page_title = "Exploratory Data Analysis", page_icon = ":bar_chart:",layout = "wide")
     
-    st.title(":bar_chart: EDA")
+    st.title(":bar_chart: Exploratory Data Analysis")
     st.markdown('<style>div: block-container{padding-top:1rem;}</style>',unsafe_allow_html = True)
     
     st.sidebar.header("Choose your filter:")
-    analysis = st.sidebar.selectbox("Pick a choice", ("Pedestrian","Cyclist","Motorist","Vehicle"\
-        ,"Contributing Factors","Hotspot"))
+    analysis = st.sidebar.selectbox("Pick an Analysis type", sorted(("Pedestrian","Cyclist","Motorist","Vehicle"\
+        ,"Contributing Factors","Hotspot")))
 
     if analysis == ("Vehicle"):
         vehicle_collision_type_df_final_pandas = pd.read_csv("graph_1.csv")
         st.header("Vehicle Collisions Pie")
-        fig_pie = px.pie(vehicle_collision_type_df_final_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS",color_discrete_sequence=px.colors.sequential.RdBu)
+        fig_pie = px.pie(vehicle_collision_type_df_final_pandas, names="ACC_IN_BETWEEN_UNQ",\
+             values="GROUPS",color_discrete_sequence=px.colors.sequential.RdBu)
+        
+        # fig_pie.update_layout(legend=dict(title="Collision Types",))
         st.plotly_chart(fig_pie)
+        st.markdown("In the above graph the values S,L,M,H,O stand for Small,\
+             Light, Medium, Heavy, and Other respectively")
         if st.toggle("Expand plot for higher resolution"):
             vehicle_collision_type_df_final_part1_pandas = pd.read_csv("graph_1_1.csv")
 
-            fig_pie_1 = px.pie(vehicle_collision_type_df_final_part1_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS", color_discrete_sequence=px.colors.sequential.RdBu)
+            fig_pie_1 = px.pie(vehicle_collision_type_df_final_part1_pandas,\
+                 names="ACC_IN_BETWEEN_UNQ", values="GROUPS",\
+                     color_discrete_sequence=px.colors.sequential.RdBu)
             fig_pie_1.update_layout(title_text='Minor Vehicle Collisions')
 
             vehicle_collision_type_df_final_part2_pandas = pd.read_csv("graph_1_2.csv")
 
-            fig_pie_2 = px.pie(vehicle_collision_type_df_final_part2_pandas, names="ACC_IN_BETWEEN_UNQ", values="GROUPS", color_discrete_sequence=px.colors.sequential.RdBu)
+            fig_pie_2 = px.pie(vehicle_collision_type_df_final_part2_pandas,\
+                 names="ACC_IN_BETWEEN_UNQ", values="GROUPS",\
+                     color_discrete_sequence=px.colors.sequential.RdBu)
             fig_pie_2.update_layout(title_text='Major Vehicle Collisions')
 
             st.subheader("Vehicle Collisions")
@@ -55,7 +64,7 @@ def main():
         fig_pie_dl = px.pie(dl_status_pandas, names="CONTRIBUTING_FACTOR_1", values="ACCIDENTS",color_discrete_sequence=px.colors.sequential.RdBu)
         st.plotly_chart(fig_pie_dl)
     
-    if analysis == ("Pedestrian"):
+    elif analysis == ("Pedestrian"):
         st.header("Pedestrian Analysis")
         pd_action = pd.read_csv("graph_6.csv")
         fig = px.pie(pd_action, values='VALS', names='PED_ACTION', title='Pedestrian Action',
@@ -124,7 +133,7 @@ def main():
     
         st.pyplot(fig_injuries)
     
-    if analysis ==("Cyclist"):
+    elif analysis ==("Cyclist"):
         st.header('Cyclist Accidents')
         pd_numcycle = pd.read_csv("graph_13.csv")
 
@@ -177,7 +186,7 @@ def main():
         fig = px.line(getNumOfCyclistAccidents_timely_pd, x='HOUR_OCCUR', y='VALS', markers=True, line_shape='linear',
                 labels={'VALS': 'Count of Accidents','HOUR_OCCUR':'TIME'})
     
-    if analysis == ("Motorist"):
+    elif analysis == ("Motorist"):
         st.header('Motorist Accidents')
     
         pd_nummotor = pd.read_csv("graph_17.csv")
@@ -234,7 +243,7 @@ def main():
         ax_injuries.legend()
     
         st.pyplot(fig_injuries)
-    if analysis == ("Contributing Factors"):
+    elif analysis == ("Contributing Factors"):
         borough_based_classification_pd = pd.read_csv("graph_21.csv")
 
         st.header("Contributing Factor Classification Analysis Vs Boroughs")
@@ -304,11 +313,16 @@ def main():
                 fig = px.bar(staten_island_based_cfclassification_pd,color="cf_Classification", x="cf_Classification", y="No_of_accidents_occurred")
 
                 st.plotly_chart(fig)
-    if analysis == ('Hotspot'):
-        link_markdown = '[Preview the Interactive Hotspot created on a new tab](https://sabarishreddy99.github.io/BigData_CS-GY-6513_Fall2023_Proj/)'
-        st.markdown(link_markdown, unsafe_allow_html=True)
-
-
+    elif analysis == ('Hotspot'):
+        st.header("Accident hotspots with heatmap")
+        with open("C:/Users/321ni/Desktop/Year 2023- 2024/Big Data C/hotspotHeatMap.html") as f:
+            doc1 = f.read()
+        st.components.v1.html(doc1,height = 600)
+        if st.toggle("Toggle to view without heatmap"):
+            st.header("Accident hotspots without heatmap")
+            with open("C:/Users/321ni/Desktop/Year 2023- 2024/Big Data C/index.html") as f2:
+                doc2 = f2.read()
+            st.components.v1.html(doc2,height = 600)
 
 
 
